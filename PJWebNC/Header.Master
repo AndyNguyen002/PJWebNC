@@ -1,0 +1,182 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Header.Master.cs" Inherits="PJWebNC.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <asp:ContentPlaceHolder ID="tieude" runat="server"></asp:ContentPlaceHolder>
+    <link href="Header.css" rel="stylesheet" />
+    <link href="Footer.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="Container">
+            
+                <!-- header -->
+            <div class="Header">
+            <!-- DanhMuc -->
+            <div class="DanhMuc">
+                
+                    <ul style="display: flex; flex-direction: row; margin: 0px;">              
+                        <li class="itemDanhMuc"><a href="default.aspx">Trang chủ</a></li>
+                        <li class="itemDanhMuc"><a href="#">Giới thiệu</a></li>
+                        <li class="itemDanhMuc"><a href="#">Thương hiệu</a></li>
+                        <li class="itemDanhMuc"><a href="DanhSach.aspx">Sản phẩm</a></li>
+                        <li class="itemDanhMuc"><a href="#">Blog</a></li>
+                    </ul>
+                
+            </div>
+            <!-- end DanhMuc -->
+
+            <!-- Icon -->
+            <div class="logoHead">
+                <a href="default.aspx" ><img src="https://xxivstore.com/wp-content/themes/yootheme/cache/XXIV-Logo-Web-da8bec8c.webp" alt="" class="iconWeb"></a>
+            </div>
+            <!-- end Icon -->
+
+
+            <!-- ChucNang -->
+            <div class="ChucNang">
+                <ul style="display: flex;flex-direction: row; margin: 0px;">
+                    <a href="#"><li class="itemChucNang"><img src="../Icon/search.png" alt=""></li></a>   
+                    <a href="#"><li class="itemChucNang"><img src="../Icon/User.png" alt=""></li></a>
+                    <a href="#"><li class="itemChucNang"><img src="../Icon/cart.png" alt=""></li></a>
+                </ul>
+            </div>
+            <!-- end ChucNang -->
+        </div>
+                <!-- end header -->
+            <asp:ContentPlaceHolder ID="noidung" runat="server"></asp:ContentPlaceHolder>
+                <!-- Footer -->
+                <div class="Footer">
+                    <!-- Contact -->
+                    <div class="Contact">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="../Icon/instagram.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../Icon/facebook.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../Icon/youtube.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../Icon/diachi.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End contact -->
+
+                    <!-- Support -->
+                    <div class="Support">
+                        <!-- store -->
+                        <div class="store">
+                            <ul>
+                                <li style="margin-bottom: 21px; font-size: 31px;">
+                        
+                                        xxiv store
+                        
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Ưu đãi thanh viên
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Tài khoản
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Tuyển dụng
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- store -->
+
+                        <!-- chinh sach -->
+                        <div class="store">
+                            <ul>
+                                <li style="margin-bottom: 21px; font-size: 31px;">
+                        
+                                        Chính sách bán hàng
+                        
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Phương thức vận chuyển
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                    Câu hỏi thường gặp
+                                </a></li>
+                                <li><a href="#">
+                                    Điều khoản và điều kiện sử dụng
+                                </a></li>
+                                <li><a href="#">
+                                    Điều khoản và điều kiện bán hàng
+                                </a></li>
+                                <li><a href="#">
+                                    Thông báo pháp lý
+                                </a></li>
+                            </ul>
+                        </div>
+                        <!-- chinh sach -->
+
+                        <!-- thong tin -->
+                        <div class="store">
+                            <ul>
+                                <li style="margin-bottom: 21px; font-size: 31px;">
+                        
+                                        Thông tin chung
+                        
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Giới thiệu
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Liên hệ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Sản phẩm
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- thong tin -->
+
+                    </div>
+                    <!-- End support -->
+
+                    <!-- copy -->
+                    <div class="copy">
+                        © xxiv 2021 | all right reserved
+                    </div>
+                </div>
+                <!-- End footer -->
+        </div>
+    </form>
+</body>
+</html>

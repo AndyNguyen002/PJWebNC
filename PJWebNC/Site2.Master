@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="PJWebNC.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <!-- Footer -->
+    <div class="Footer">
+        <!-- Contact -->
+        <div class="Contact">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../Icon/instagram.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../Icon/facebook.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../Icon/youtube.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../Icon/diachi.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- End contact -->
+
+        <!-- Support -->
+        <div class="Support">
+            <!-- store -->
+            <div class="store">
+                <ul>
+                    <li style="margin-bottom: 21px; font-size: 31px;">
+                        
+                            xxiv store
+                        
+                    </li>
+                    <li>
+                        <a href="#">
+                            Ưu đãi thanh viên
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Tài khoản
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Tuyển dụng
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- store -->
+
+            <!-- chinh sach -->
+            <div class="store">
+                <ul>
+                    <li style="margin-bottom: 21px; font-size: 31px;">
+                        
+                            Chính sách bán hàng
+                        
+                    </li>
+                    <li>
+                        <a href="#">
+                            Phương thức vận chuyển
+                        </a>
+                    </li>
+                    <li><a href="#">
+                        Câu hỏi thường gặp
+                    </a></li>
+                    <li><a href="#">
+                        Điều khoản và điều kiện sử dụng
+                    </a></li>
+                    <li><a href="#">
+                        Điều khoản và điều kiện bán hàng
+                    </a></li>
+                    <li><a href="#">
+                        Thông báo pháp lý
+                    </a></li>
+                </ul>
+            </div>
+            <!-- chinh sach -->
+
+            <!-- thong tin -->
+            <div class="store">
+                <ul>
+                    <li style="margin-bottom: 21px; font-size: 31px;">
+                        
+                            Thông tin chung
+                        
+                    </li>
+                    <li>
+                        <a href="#">
+                            Giới thiệu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Liên hệ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Sản phẩm
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- thong tin -->
+
+        </div>
+        <!-- End support -->
+
+        <!-- copy -->
+        <div class="copy">
+            © xxiv 2021 | all right reserved
+        </div>
+    </div>
+    <!-- End footer -->
+</body>
+</html>
+        </div>
+    </form>
+</body>
+</html>
