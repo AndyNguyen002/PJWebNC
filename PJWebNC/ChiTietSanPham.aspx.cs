@@ -19,6 +19,13 @@ namespace PJWebNC
 
             }
 
+            List<SanPham> lstSPNew = Dao.DaoSanPham.getTop5New();
+            dtlNew.DataSource = lstSPNew;
+            DataBind();
+
+            List<SanPham> lstRelated = Dao.DaoSanPham.getTop5related(ThuongHieu.Text, Convert.ToString(pID));
+            dtlRelated.DataSource = lstRelated;
+            DataBind();
         }
         public void BindData(string pID)
         {

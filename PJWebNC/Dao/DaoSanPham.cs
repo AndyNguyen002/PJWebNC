@@ -148,5 +148,75 @@ namespace PJWebNC.Dao
                 return objND;
             }
         }
+        public static List<SanPham> getTop5New()
+        {
+            List<SanPham> lstSP = new List<SanPham>();
+            //Lấy thông tin chuỗi kết nối từ Web.config
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+            //Viết câu lệnh truy vấn
+            string strSQL = "SELECT TOP 5 IDSanPham, TenThuongHieu, TenSP, Anh, GiaBan FROM SanPham, ThuongHieu where SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu";
+            //Định nghĩa đối tượng Connection
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                //Khởi tạo đối tượng Command
+                SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                //Mở kết nối tới CSDL
+                sqlConnection.Open();
+                //Sử dụng đối tượng DataReader để đọc dữ liệu
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                SanPham objSP = null;
+                while (sqlDataReader.Read())
+                {
+                    objSP = new SanPham();
+                    objSP.IDSanPham = Convert.ToInt32(sqlDataReader["IDSanPham"]);
+                    objSP.TenSP = Convert.ToString(sqlDataReader["TenSP"]);
+                    objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
+                    objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
+                    objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
+                    lstSP.Add(objSP);
+                }
+                sqlDataReader.Close();//Đóng đối tượng DataReader
+                sqlConnection.Close();//Đóng kết nối
+                sqlConnection.Dispose();//Giải phóng bộ nhớ
+                return lstSP;
+
+            }
+        }
+        public static List<SanPham> getTop5related(string _mathuonghieu, string _tensp)
+        {
+            List<SanPham> lstSP = new List<SanPham>();
+            //Lấy thông tin chuỗi kết nối từ Web.config
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+            //Viết câu lệnh truy vấn
+            string strSQL = "SELECT IDSanPham, TenThuongHieu, TenSP, Anh, GiaBan FROM SanPham, ThuongHieu where SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and ThuongHieu.TenThuongHieu = '"+_mathuonghieu+ "' and IDSanPham NOT IN ('" + _tensp + "')";
+            //Định nghĩa đối tượng Connection
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                //Khởi tạo đối tượng Command
+                SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                //Mở kết nối tới CSDL
+                sqlConnection.Open();
+                //Sử dụng đối tượng DataReader để đọc dữ liệu
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                SanPham objSP = null;
+                while (sqlDataReader.Read())
+                {
+                    objSP = new SanPham();
+                    objSP.IDSanPham = Convert.ToInt32(sqlDataReader["IDSanPham"]);
+                    objSP.TenSP = Convert.ToString(sqlDataReader["TenSP"]);
+                    objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
+                    objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
+                    objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
+                    lstSP.Add(objSP);
+                }
+                sqlDataReader.Close();//Đóng đối tượng DataReader
+                sqlConnection.Close();//Đóng kết nối
+                sqlConnection.Dispose();//Giải phóng bộ nhớ
+                return lstSP;
+
+            }
+        }
     }
 }

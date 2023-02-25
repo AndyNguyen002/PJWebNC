@@ -69,14 +69,14 @@
 .panel {
     width: 100%;
     height: 300px;
-    background-color: lightpink;
+    /*background-color: lightpink;*/
     margin-top: 50px;
 }
 
 .newProduct {
-    width: 80%;
+    width: 1215px;
     height: 500px;
-    background-color: lightskyblue;
+    /*background-color: lightskyblue;*/
 }
 
 .tieude {
@@ -86,17 +86,17 @@
 }
 
 .ProductShow {
-    width: 100%;
+    width: 1215px;
     height: 390px;
-    background-color: lightseagreen;
+    /*background-color: lightseagreen;*/
     display: flex;
     flex-direction: row;
 }
 
 .itemShow {
-    width: 19.5%;
+    width: 230px;
     height: 390px;
-    background-color: lightsalmon;
+    /*background-color: lightsalmon;*/
     margin-left: 10px;
     display: flex;
     flex-direction: column;

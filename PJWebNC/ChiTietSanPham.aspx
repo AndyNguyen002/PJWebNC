@@ -29,7 +29,7 @@
                         <%--<input class="soluong" type="number"> 
                         <button class="addcart"></button>--%>
                         <asp:TextBox ID="Soluong" Width="170" runat="server"></asp:TextBox> 
-                        <asp:Button ID="ThemCart" Width="420" runat="server" Text="THÊM VÀO GIỎ HÀNG" />
+                        <asp:Button ID="ThemCart" Width="420" runat="server" BackColor="black" ForeColor="white" Text="THÊM VÀO GIỎ HÀNG" />
                     </div>
     
                     <div class="panel">
@@ -41,55 +41,45 @@
             <div class="newProduct">
                 <p class="tieude">Sản phẩm mới nhất</p>
                 <div class="ProductShow">
-                    <div class="itemShow">
-                        <div class="picProduct">
-                            <img style=" width: 200px; height: 230px;" src="https://xxivstore.com/wp/content/uploads/2023/02/Nuoc-hoa-Montblanc-Signature-300x300.png" alt="">
-                        </div>
-                        <p class="HangSX">HangSX</p>
+                    <asp:DataList ID="dtlNew" runat="server" RepeatDirection="Horizontal">
+                        <ItemTemplate>
+                            <a href="ChiTietSanPham.aspx?id=<%#Eval("IDSanPham") %>">
+                                <div class="itemShow">
+                                    <div class="picProduct">
+                                        <asp:Image ID="imgg" Width="200" Height="230" runat="server" ImageUrl=<%# Eval("Anh") %> />
+                                    </div>
+                                    <p class="HangSX"><%#Eval("TenThuongHieu") %></p>
 
-                        <p>TenSP</p>
+                                    <p><%#Eval("TenSP") %></p>
 
-                        <h4>GiaTien</h4>
-                    </div>
-                    <div class="itemShow">
-                        
-                    </div>
-                    <div class="itemShow">
-                        
-                    </div>
-                    <div class="itemShow">
-                        
-                    </div>
-                    <div class="itemShow">
-                        
-                    </div>
+                                    <h4><%#Eval("GiaBan") %></h4>
+                                </div>
+                            </a>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    
                 </div>
             </div>
             <div class="newProduct">
                 <p class="tieude">Sản phẩm liên quan</p>
                 <div class="ProductShow">
-                    <div class="itemShow">
-                        <div class="picProduct">
-                            <img style=" width: 200px; height: 230px;" src="" alt="">
-                        </div>
-                        <p class="HangSX">HangSX</p>
+                    <asp:DataList ID="dtlRelated" runat="server" RepeatDirection="Horizontal">
+                        <ItemTemplate>
+                            <a href="ChiTietSanPham.aspx?id=<%#Eval("IDSanPham") %>">
+                                <div class="itemShow">
+                                    <div class="picProduct">
+                                        <asp:Image ID="imgg" Width="200" Height="230" runat="server" ImageUrl=<%# Eval("Anh") %> />
+                                    </div>
+                                    <p class="HangSX"><%#Eval("TenThuongHieu") %></p>
 
-                        <p>TenSP</p>
+                                    <p><%#Eval("TenSP") %></p>
 
-                        <h4>GiaTien</h4>
-                    </div>
-                    <div class="itemShow">
-                        
-                    </div>
-                    <div class="itemShow">
-                        
-                    </div>
-                    <div class="itemShow">
-                        
-                    </div>
-                    <div class="itemShow">
-                        
-                    </div>
+                                    <h4><%#Eval("GiaBan") %></h4>
+                                </div>
+                            </a>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    
                 </div>
             </div>
         </div>

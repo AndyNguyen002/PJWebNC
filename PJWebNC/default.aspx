@@ -22,26 +22,9 @@
                             </ItemTemplate>
                         </asp:DataList>
                         </div>
-                        <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HotBrand %>" SelectCommand="SELECT [LogoBrand] FROM [ThuongHieu]"></asp:SqlDataSource>--%>
                         
                         
                     </div>
-                    <%--<div class="brand1">
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                    </div>
-                    <div class="brand1">
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                        <div class="itemBrand"></div>
-                    </div>--%>
                 </div>
                 
             </div>
