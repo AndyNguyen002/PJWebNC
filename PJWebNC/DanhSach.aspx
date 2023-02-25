@@ -29,7 +29,7 @@
                     
                     <asp:DataList ID="dtlDanhSachSanPham" RepeatColumns="5" RepeatDirection="Horizontal" runat="server" >
                         <ItemTemplate>
-                            <a href="ChiTiet.aspx?id=<%# Eval("IDSanPham") %>">
+                            <a href="ChiTietSanPham.aspx?id=<%# Eval("IDSanPham") %>">
                                 <div class="itemProduct1">
                                     <div class="picProduct1">
                                         <asp:Image ID="Image1" runat="server" Width="100%" Height="100%" ImageUrl='<%# Eval("Anh") %>' />

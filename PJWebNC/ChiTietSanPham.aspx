@@ -8,7 +8,7 @@
                 <div class="c-left">
                     <div class="imgProduct">
                         <div class="imgTop">
-                            <img style="width: 400px; height: 400px;" src="https://xxivstore.com/wp-content/uploads/2022/08/Imaginary-Authors-Cape-Heartache-600x600.jpg" alt="">
+                            <asp:Image runat="server" ID="image1" Width="400px" Height="400px" />
                         </div>
                         <div class="imgBot">
     
@@ -18,19 +18,22 @@
                     <p style="font-size: 18px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas adipisci quasi facere repellat quod nesciunt, perferendis, minus laudantium repudiandae soluta facilis blanditiis eius itaque corrupti, in debitis vero perspiciatis illum.</p>
                 </div>
                 <div class="c-right">
-                    <span style="font-size: 18px; margin-bottom: 25px; margin-top: 30px;">Lorem, ipsum.</span>
-                    <span style="font-size: 40px; margin-bottom: 25px;"> Lorem, ipsum dolor.</span>
-                    <span style="font-size: 18px; margin-bottom: 25px;">Lorem.</span>
-                    <span style="font-size: 25px; margin-bottom: 40px;">123.123.123</span>
+                    
+                    <span style="font-size: 18px; margin-bottom: 25px; margin-top: 30px;"><asp:label ID="ThuongHieu" runat="server" ></asp:label></span>
+                    <span style="font-size: 40px; margin-bottom: 25px;"><asp:label ID="TenSP" runat="server" ></asp:label></span>
+                    <span style="font-size: 18px; margin-bottom: 25px;"><asp:label ID="GioiTinh" runat="server" ></asp:label></span>
+                    <span style="font-size: 25px; margin-bottom: 40px;"><asp:label ID="GiaBan" runat="server" ></asp:label> VND</span>
                     <span style="font-size: 18px; margin-bottom: 20px;">Lorem, ipsum.</span>
-    
+                    
                     <div class="chucnang">
-                        <input class="soluong" type="number"> 
-                        <button class="addcart"></button>
+                        <%--<input class="soluong" type="number"> 
+                        <button class="addcart"></button>--%>
+                        <asp:TextBox ID="Soluong" Width="170" runat="server"></asp:TextBox> 
+                        <asp:Button ID="ThemCart" Width="420" runat="server" Text="THÊM VÀO GIỎ HÀNG" />
                     </div>
     
                     <div class="panel">
-    
+                        
                     </div>
                 </div>
             </div>

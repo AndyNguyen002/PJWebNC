@@ -81,13 +81,13 @@ namespace PJWebNC.Dao
 
             }
         }
-        public static List<SanPham> getOneById(string _name)
+        public static SanPham getOneById(string _name)
         {
-            List<SanPham> lstSP = new List<SanPham>();
+            SanPham lstSP = new SanPham();
             //Lấy thông tin chuỗi kết nối từ Web.config
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
             //Viết câu lệnh truy vấn
-            string strSQL = "SELECT TenThuongHieu, TenSP, Anh, GiaBan FROM SanPham, ThuongHieu where SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu where TenSP = '" + _name + "'";
+            string strSQL = "SELECT TenThuongHieu, TenSP, Anh, GiaBan FROM SanPham, ThuongHieu where SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and TenSP = '" + _name + "'";
             //Định nghĩa đối tượng Connection
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
@@ -107,7 +107,7 @@ namespace PJWebNC.Dao
                     objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
                     objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
                     objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
-                    lstSP.Add(objSP);
+                    
                 }
                 sqlDataReader.Close();//Đóng đối tượng DataReader
                 sqlConnection.Close();//Đóng kết nối
@@ -116,13 +116,14 @@ namespace PJWebNC.Dao
 
             }
         }
+
         public static SanPham getOne(string _id)
         {
-            SanPham objSP = null;
+            SanPham objND = null;
 
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
 
-            string sql = "SELECT TenThuongHieu, TenSP, Anh, GiaBan FROM SanPham, ThuongHieu where SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu where TenSP = '" + _id + "'";
+            string sql = "SELECT GioiTinh.GioiTinh, TenThuongHieu, TenSP, Anh, GiaBan FROM SanPham, ThuongHieu, GioiTinh where GioiTinh.MaGioiTinh = SanPham.GioiTinh and SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and IDSanPham = '"+_id+"'";
 
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
@@ -134,16 +135,17 @@ namespace PJWebNC.Dao
 
                 if (reader.Read())
                 {
-                    objSP.IDSanPham = Convert.ToInt32(reader["IDSanPham"]);
-                    objSP.TenSP = Convert.ToString(reader["TenSP"]);
-                    objSP.TenThuongHieu = Convert.ToString(reader["TenThuongHieu"]);
-                    objSP.Anh = Convert.ToString(reader["Anh"]);
-                    objSP.GiaBan = Convert.ToInt32(reader["GiaBan"]);
+                    objND = new SanPham();
+                    objND.GioiTinh = Convert.ToString(reader["GioiTinh"]);
+                    objND.TenSP = Convert.ToString(reader["TenSP"]);
+                    objND.TenThuongHieu = Convert.ToString(reader["TenThuongHieu"]);
+                    objND.Anh = Convert.ToString(reader["Anh"]);
+                    objND.GiaBan = Convert.ToInt32(reader["GiaBan"]);
                 }
                 reader.Close();//Đóng đối tượng DataReader
                 conn.Close();//Đóng kết nối
                 conn.Dispose();//Giải phóng bộ nhớ
-                return objSP;
+                return objND;
             }
         }
     }

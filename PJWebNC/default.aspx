@@ -60,16 +60,18 @@
                         
                         <asp:DataList ID="SanPham" runat="server" RepeatDirection="Horizontal">
                             <ItemTemplate>
-                                <div class="itemProduct">
-                                <div class="picProduct">
-                                    <asp:Image ID="img1" runat="server" Width="200" Height="250" ImageUrl='<%# Eval("Anh") %>' />
-                                </div>
-                                <p class="HangSX"><%# Eval("TenThuongHieu") %></p>
+                                <a href="ChiTietSanPham.aspx?id=<%#Eval("IDSanPham") %>">
+                                    <div class="itemProduct">
+                                        <div class="picProduct">
+                                            <asp:Image ID="img1" runat="server" Width="200" Height="250" ImageUrl='<%# Eval("Anh") %>' />
+                                        </div>
+                                        <p class="HangSX"><%# Eval("TenThuongHieu") %></p>
 
-                                <p><%# Eval("TenSP") %></p>
+                                        <p><%# Eval("TenSP") %></p>
 
-                                <h4 style="text-align:center"><%#Eval("GiaBan") %> đ</h4>
-                                </div>
+                                        <h4 style="text-align: center"><%#Eval("GiaBan") %> đ</h4>
+                                    </div>
+                                </a>
                             </ItemTemplate>
                         </asp:DataList>
                         
