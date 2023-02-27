@@ -86,7 +86,11 @@
     <Content Include="Icon\cart.png" />
     <Content Include="Icon\diachi.png" />
     <Content Include="Icon\facebook.png" />
+    <Content Include="Icon\free-ship.png" />
+    <Content Include="Icon\gift.png" />
+    <Content Include="Icon\grommet-icons_shield-security.png" />
     <Content Include="Icon\instagram.png" />
+    <Content Include="Icon\perfume.png" />
     <Content Include="Icon\search.png" />
     <Content Include="Icon\User.png" />
     <Content Include="Icon\youtube.png" />

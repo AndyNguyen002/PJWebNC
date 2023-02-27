@@ -12,9 +12,19 @@ namespace PJWebNC
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<SanPham> lst = Dao.DaoSanPham.getAll();
-            dtlDanhSachSanPham.DataSource= lst;
-            DataBind();
+            int pID = Convert.ToInt32(Request.QueryString["id"]);
+            if(pID == 0)
+            {
+                List<SanPham> lst = Dao.DaoSanPham.getAll();
+                dtlDanhSachSanPham.DataSource = lst;
+                DataBind();
+            }
+            else
+            {
+                List<SanPham> lstgetHsx = Dao.DaoSanPham.getAllbyHangSX(Convert.ToString(pID));
+                dtlDanhSachSanPham.DataSource=lstgetHsx;
+                DataBind();
+            }
 
             
         }

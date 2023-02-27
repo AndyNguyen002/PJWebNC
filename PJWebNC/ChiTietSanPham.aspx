@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" CodeBehind="ChiTietSanPham.aspx.cs" Inherits="PJWebNC.ChiTietSanPham" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tieude" runat="server">
     <link rel="stylesheet" href="ChiTietSanPham.css" />
+    <title><%Response.Write(TenSP.Text);%></title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="noidung" runat="server">
     <div class="Content">

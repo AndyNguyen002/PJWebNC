@@ -17,7 +17,7 @@ namespace PJWebNC.Dao
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
             //Viết câu lệnh truy vấn
             
-            string strSQL = "SELECT LogoBrand from ThuongHieu";
+            string strSQL = "SELECT MaThuongHieu, LogoBrand from ThuongHieu";
             //Định nghĩa đối tượng Connection
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
@@ -32,6 +32,7 @@ namespace PJWebNC.Dao
                 while (sqlDataReader.Read())
                 {
                     objHSX = new HangSX();
+                    objHSX.MaThuongHieu = Convert.ToInt32(sqlDataReader["MaThuongHieu"]);
                     objHSX.LogoBrand = Convert.ToString(sqlDataReader["LogoBrand"]);
                     lstHSX.Add(objHSX);
                 }

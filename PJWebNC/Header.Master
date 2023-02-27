@@ -1,4 +1,4 @@
-﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Header.Master.cs" Inherits="PJWebNC.Site1" %>
+﻿  <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Header.Master.cs" Inherits="PJWebNC.Site1" %>
 
 <!DOCTYPE html>
 
@@ -8,6 +8,7 @@
     <asp:ContentPlaceHolder ID="tieude" runat="server"></asp:ContentPlaceHolder>
     <link href="Header.css" rel="stylesheet" />
     <link href="Footer.css" rel="stylesheet" />
+    <link rel="icon" href="Icon/perfume.png"  />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -22,7 +23,7 @@
                         <li class="itemDanhMuc"><a href="default.aspx">Trang chủ</a></li>
                         <li class="itemDanhMuc"><a href="GioiThieu.aspx">Giới thiệu</a></li>
                         <li class="itemDanhMuc"><a href="#">Thương hiệu</a></li>
-                        <li class="itemDanhMuc"><a href="DanhSach.aspx">Sản phẩm</a></li>
+                        <li class="itemDanhMuc"><a href="DanhSach.aspx?id=0">Sản phẩm</a></li>
                         <li class="itemDanhMuc"><a href="Blog.aspx">Blog</a></li>
                     </ul>
                 
@@ -176,6 +177,7 @@
                     </div>
                 </div>
                 <!-- End footer -->
+            
         </div>
     </form>
 </body>

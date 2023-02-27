@@ -16,9 +16,11 @@
                         <div class="brand1">
                         <asp:DataList ID="DataList1" RepeatColumns="6" RepeatDirection="Horizontal" runat="server">
                             <ItemTemplate>
-                                <div class="itemBrand" style="display:flex; justify-content:center; align-items:center">
+                                <a href="DanhSach.aspx?id=<%#Eval("MaThuongHieu") %>">
+                                    <div class="itemBrand" style="display:flex; justify-content:center; align-items:center">
                                     <asp:Image ID="LogoBrandLabel" runat="server" Width="160" Height="160" ImageUrl='<%# Eval("LogoBrand") %>' />
                                 </div>
+                                </a>
                             </ItemTemplate>
                         </asp:DataList>
                         </div>
