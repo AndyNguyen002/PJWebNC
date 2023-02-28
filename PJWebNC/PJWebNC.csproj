@@ -75,6 +75,28 @@
   <ItemGroup>
     <Content Include="Blog.aspx" />
     <Content Include="Blog.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.min.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.css" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.min.css" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.js" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.min.js" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.min.js" />
     <Content Include="ChiTietSanPham.aspx" />
     <Content Include="ChiTietSanPham.css" />
     <Content Include="DanhSach.aspx" />
@@ -167,6 +189,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.js.map" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.js.map" />
+    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <Content Include="Header.Master" />
     <Content Include="Site2.Master" />

@@ -20,6 +20,13 @@ namespace PJWebNC.Entity
         public int KhuyenDung { get; set; }
 
         public string TenThuongHieu { get; set; }
+        public int DoTuoi { get; set; }
+        public int PhatHanh { get; set; }
+        public int DoLuuMui { get; set; }
 
+        public string ToneHuong { get; set; }
+        public string HuongDau { get; set; }
+        public string HuongGiua { get; set; }
+        public string HuongCuoi { get; set; }
     }
 }

@@ -12,19 +12,19 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="Container">
+        <div class="Container p-0">
             
                 <!-- header -->
             <div class="Header">
             <!-- DanhMuc -->
-            <div class="DanhMuc">
+            <div class="DanhMuc p-0">
                 
-                    <ul style="display: flex; flex-direction: row; margin: 0px;">              
-                        <li class="itemDanhMuc"><a href="default.aspx">Trang chủ</a></li>
-                        <li class="itemDanhMuc"><a href="GioiThieu.aspx">Giới thiệu</a></li>
-                        <li class="itemDanhMuc"><a href="#">Thương hiệu</a></li>
-                        <li class="itemDanhMuc"><a href="DanhSach.aspx?id=0">Sản phẩm</a></li>
-                        <li class="itemDanhMuc"><a href="Blog.aspx">Blog</a></li>
+                    <ul style="display: flex; flex-direction: row; margin: 0px;" class="p-0">              
+                        <li class="itemDanhMuc p-0 mx-2"><a href="default.aspx">Trang chủ</a></li>
+                        <li class="itemDanhMuc p-0 mx-2"><a href="GioiThieu.aspx">Giới thiệu</a></li>
+                        <li class="itemDanhMuc p-0 mx-2"><a href="#">Thương hiệu</a></li>
+                        <li class="itemDanhMuc p-0 mx-2"><a href="DanhSach.aspx?id=0">Sản phẩm</a></li>
+                        <li class="itemDanhMuc p-0 mx-2"><a href="Blog.aspx">Blog</a></li>
                     </ul>
                 
             </div>
@@ -38,13 +38,13 @@
 
 
             <!-- ChucNang -->
-            <div class="ChucNang">
-                <ul style="display: flex;flex-direction: row; margin: 0px;">
-                    <a href="#"><li class="itemChucNang"><img src="../Icon/search.png" alt=""></li></a>   
-                    <a href="#"><li class="itemChucNang"><img src="../Icon/User.png" alt=""></li></a>
-                    <a href="#"><li class="itemChucNang"><img src="../Icon/cart.png" alt=""></li></a>
+           <%-- <div class="ChucNang p-0" >
+                <ul style="display: flex;flex-direction: row; margin: 0px;" class="p-0">
+                    <a href="#"><li class="itemChucNang p-0"><img src="../Icon/search.png" alt=""></li></a>   
+                    <a href="#"><li class="itemChucNang p-0"><img src="../Icon/User.png" alt=""></li></a>
+                    <a href="#"><li class="itemChucNang p-0"><img src="../Icon/cart.png" alt=""></li></a>
                 </ul>
-            </div>
+            </div>--%>
             <!-- end ChucNang -->
         </div>
                 <!-- end header -->
@@ -53,23 +53,23 @@
                 <div class="Footer">
                     <!-- Contact -->
                     <div class="Contact">
-                        <ul>
-                            <li>
+                        <ul class="p-0">
+                            <li class="p-0">
                                 <a href="#">
                                     <img src="../Icon/instagram.png" alt="">
                                 </a>
                             </li>
-                            <li>
+                            <li class="p-0">
                                 <a href="#">
                                     <img src="../Icon/facebook.png" alt="">
                                 </a>
                             </li>
-                            <li>
+                            <li class="p-0">
                                 <a href="#">
                                     <img src="../Icon/youtube.png" alt="">
                                 </a>
                             </li>
-                            <li>
+                            <li class="p-0">
                                 <a href="#">
                                     <img src="../Icon/diachi.png" alt="">
                                 </a>

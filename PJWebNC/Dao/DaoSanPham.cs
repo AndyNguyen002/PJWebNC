@@ -253,5 +253,67 @@ namespace PJWebNC.Dao
 
             }
         }
+        public static SanPham getDacDiem(string _id)
+        {
+            SanPham objND = null;
+
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+
+            string sql = "select IDSanPham, PhatHanh, DoTuoi, DoLuuMui from DacDiem where IDSanPham = '" + _id + "'";
+
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                SqlCommand sqlCommand = new SqlCommand(sql, conn);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+
+                conn.Open();
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    objND = new SanPham();
+                    
+                    objND.PhatHanh = Convert.ToInt32(reader["PhatHanh"]);
+                    objND.DoLuuMui = Convert.ToInt32(reader["DoLuuMui"]);
+                    objND.DoTuoi = Convert.ToInt32(reader["DoTuoi"]);
+                }
+                reader.Close();//Đóng đối tượng DataReader
+                conn.Close();//Đóng kết nối
+                conn.Dispose();//Giải phóng bộ nhớ
+                return objND;
+            }
+        }
+        public static SanPham getHuong(string _id)
+        {
+            SanPham objND = null;
+
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+
+            string sql = "Select IDSanPham, ToneHuong, HuongDau, HuongGiua, HuongCuoi from Huong where IDSanPham =  '" + _id + "'";
+
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                SqlCommand sqlCommand = new SqlCommand(sql, conn);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+
+                conn.Open();
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    objND = new SanPham();
+
+                    objND.ToneHuong = Convert.ToString(reader["ToneHuong"]);
+                    objND.HuongDau = Convert.ToString(reader["HuongDau"]);
+                    objND.HuongGiua = Convert.ToString(reader["HuongGiua"]);
+                    objND.HuongCuoi = Convert.ToString(reader["HuongCuoi"]);
+                    
+                }
+                reader.Close();//Đóng đối tượng DataReader
+                conn.Close();//Đóng kết nối
+                conn.Dispose();//Giải phóng bộ nhớ
+                return objND;
+            }
+        }
     }
 }
