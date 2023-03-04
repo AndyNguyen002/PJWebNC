@@ -5,9 +5,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="noidung" runat="server">
 <!-- Content -->
-        <div class="Content">
+        <div class="Content" style="height:auto;">
             <p style="font-size: 50px;">Shop</p>
-            <div class="Content1">
+            <div class="Content1" style="height:2700px;">
                 <div class="c-left">
                 <div class="dsThuongHieu">
                     <h2>THƯƠNG HIỆU</h2>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="c-right">
                     
-                    <asp:DataList ID="dtlDanhSachSanPham" RepeatColumns="5" RepeatDirection="Horizontal" runat="server" >
+                    <asp:DataList ID="dtlDanhSachSanPham" RepeatColumns="5" RepeatDirection="Horizontal" runat="server"   >
                         <ItemTemplate>
                             <a href="ChiTietSanPham.aspx?id=<%# Eval("IDSanPham") %>">
                                 <div class="itemProduct1">
@@ -36,7 +36,7 @@
                                     </div>
                                     <h3 class="HangSX1"><%# Eval("TenThuongHieu") %>
                                     </h3>
-                                    <h3 class="nameProduct1"><%# Eval("TenSP") %>
+                                    <h3 class="nameProduct1" style="text-align:center;"><%# Eval("TenSP") %>
                                     </h3>
                                     <h3 class="nameProduct1"><%# Eval("GiaBan") %>
                                     </h3>

@@ -15,38 +15,39 @@
         <div class="Container p-0">
             
                 <!-- header -->
-            <div class="Header">
-            <!-- DanhMuc -->
-            <div class="DanhMuc p-0">
-                
-                    <ul style="display: flex; flex-direction: row; margin: 0px;" class="p-0">              
+            <div class="Header" style="padding-left: 0px; padding-right: 0px;">
+                <!-- DanhMuc -->
+                <div class="DanhMuc p-0 ps-5">
+
+                    <ul style="display: flex; flex-direction: row; margin: 0px;" class="p-0">
                         <li class="itemDanhMuc p-0 mx-2"><a href="default.aspx">Trang chủ</a></li>
                         <li class="itemDanhMuc p-0 mx-2"><a href="GioiThieu.aspx">Giới thiệu</a></li>
                         <li class="itemDanhMuc p-0 mx-2"><a href="#">Thương hiệu</a></li>
                         <li class="itemDanhMuc p-0 mx-2"><a href="DanhSach.aspx?id=0">Sản phẩm</a></li>
                         <li class="itemDanhMuc p-0 mx-2"><a href="Blog.aspx">Blog</a></li>
                     </ul>
-                
-            </div>
-            <!-- end DanhMuc -->
 
-            <!-- Icon -->
-            <div class="logoHead">
-                <a href="default.aspx" ><img src="https://xxivstore.com/wp-content/themes/yootheme/cache/XXIV-Logo-Web-da8bec8c.webp" alt="" class="iconWeb"></a>
-            </div>
-            <!-- end Icon -->
+                </div>
+                <!-- end DanhMuc -->
+
+                <!-- Icon -->
+                <div class="logoHead">
+                    <a href="default.aspx">
+                        <img src="https://xxivstore.com/wp-content/themes/yootheme/cache/XXIV-Logo-Web-da8bec8c.webp" alt="" class="iconWeb"></a>
+                </div>
+                <!-- end Icon -->
 
 
-            <!-- ChucNang -->
-           <%-- <div class="ChucNang p-0" >
+                <!-- ChucNang -->
+                <%-- <div class="ChucNang p-0" >
                 <ul style="display: flex;flex-direction: row; margin: 0px;" class="p-0">
                     <a href="#"><li class="itemChucNang p-0"><img src="../Icon/search.png" alt=""></li></a>   
                     <a href="#"><li class="itemChucNang p-0"><img src="../Icon/User.png" alt=""></li></a>
                     <a href="#"><li class="itemChucNang p-0"><img src="../Icon/cart.png" alt=""></li></a>
                 </ul>
             </div>--%>
-            <!-- end ChucNang -->
-        </div>
+                <!-- end ChucNang -->
+            </div>
                 <!-- end header -->
             <asp:ContentPlaceHolder ID="noidung" runat="server"></asp:ContentPlaceHolder>
                 <!-- Footer -->

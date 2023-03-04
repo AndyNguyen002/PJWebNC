@@ -120,11 +120,11 @@
 }
 
     .picProduct img {
-        transition: transform .2s;
+        transition: transform .3s;
     }
 
         .picProduct img:hover {
-            transform: scale(1.3);
+            transform: scale(1,1);
         }
 
 

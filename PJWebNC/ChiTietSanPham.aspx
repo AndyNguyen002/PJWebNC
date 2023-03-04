@@ -104,7 +104,7 @@
                 <div class="ProductShow">
                     <asp:DataList ID="dtlNew" runat="server" RepeatDirection="Horizontal">
                         <ItemTemplate>
-                            <a href="ChiTietSanPham.aspx?id=<%#Eval("IDSanPham") %>">
+                            <a class="linkHover" href="ChiTietSanPham.aspx?id=<%#Eval("IDSanPham") %>">
                                 <div class="itemShow">
                                     <div class="picProduct">
                                         <asp:Image ID="imgg" Width="200" Height="230" runat="server" ImageUrl=<%# Eval("Anh") %> />

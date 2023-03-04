@@ -16,9 +16,15 @@ namespace PJWebNC
             DataList1.DataSource = lst;
             DataBind();
 
-            List<SanPham> lstSanPham = Dao.DaoSanPham.getAllHot();
+            List<SanPham> lstSanPham = Dao.DaoSanPham.getTop5Nam();
+            List<SanPham> lstSanPham2 = Dao.DaoSanPham.getTop5Nu();
+            List<SanPham> lstSanPham3 = Dao.DaoSanPham.getTop5Uni();
             SanPham.DataSource = lstSanPham;
             DataBind();
+            dtlTopNu.DataSource= lstSanPham2;
+            dtlTopNu.DataBind();   
+            dtlTopUni.DataSource=lstSanPham3;
+            dtlTopUni.DataBind();
         }
     }
 }

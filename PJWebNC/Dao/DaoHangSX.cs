@@ -17,7 +17,7 @@ namespace PJWebNC.Dao
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
             //Viết câu lệnh truy vấn
             
-            string strSQL = "SELECT MaThuongHieu, LogoBrand from ThuongHieu";
+            string strSQL = "SELECT top 12 MaThuongHieu, LogoBrand from ThuongHieu";
             //Định nghĩa đối tượng Connection
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
