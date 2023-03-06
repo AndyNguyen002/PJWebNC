@@ -9,6 +9,7 @@
     <link href="Header.css" rel="stylesheet" />
     <link href="Footer.css" rel="stylesheet" />
     <link rel="icon" href="Icon/perfume.png"  />
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -39,13 +40,18 @@
 
 
                 <!-- ChucNang -->
-                <%-- <div class="ChucNang p-0" >
-                <ul style="display: flex;flex-direction: row; margin: 0px;" class="p-0">
-                    <a href="#"><li class="itemChucNang p-0"><img src="../Icon/search.png" alt=""></li></a>   
-                    <a href="#"><li class="itemChucNang p-0"><img src="../Icon/User.png" alt=""></li></a>
-                    <a href="#"><li class="itemChucNang p-0"><img src="../Icon/cart.png" alt=""></li></a>
-                </ul>
-            </div>--%>
+                <div class="ChucNang p-0 ">
+                    <ul style="display: flex; flex-direction: row; margin: 0px;" class="p-0">
+                        <a href="#">
+                            <li class="itemChucNang p-0">
+                                <img src="../Icon/User.png" alt=""></li>
+                        </a>
+                        <a href="#">
+                            <li class="itemChucNang p-0">
+                                <img src="../Icon/cart.png" alt=""></li>
+                        </a>
+                    </ul>
+                </div>
                 <!-- end ChucNang -->
             </div>
                 <!-- end header -->

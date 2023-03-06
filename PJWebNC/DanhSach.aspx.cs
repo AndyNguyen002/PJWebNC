@@ -26,11 +26,77 @@ namespace PJWebNC
                 DataBind();
             }
 
-            
+            FilterGioiTinh();
+            FilterSeason();
         }
-        private void ValidateGioiTinh()
+        private void FilterGioiTinh()
         {
-            
+            if(cbNam.Checked == true)
+            {
+                List<SanPham> lsp = Dao.DaoSanPham.getSPGioiTinh(1);
+                cbNu.Checked = false;
+                cbUnisex.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+                
+            }
+            else if (cbNu.Checked == true)
+            {
+                List<SanPham> lsp = Dao.DaoSanPham.getSPGioiTinh(2);
+                cbNam.Checked = false;
+                cbUnisex.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+            }
+            else if (cbUnisex.Checked == true)
+            {
+                
+                List<SanPham> lsp = Dao.DaoSanPham.getSPGioiTinh(3);
+                cbNu.Checked = false;
+                cbNam.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+            }
         }
+        private void FilterSeason()
+        {
+            if(cbXuan.Checked == true)
+            {
+                List<SanPham> lsp = Dao.DaoSanPham.getSPSeason(1);
+                cbHa.Checked = false;
+                cbThu.Checked = false;  
+                cbDong.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+            }
+            else if (cbThu.Checked == true)
+            {
+                List<SanPham> lsp = Dao.DaoSanPham.getSPSeason(3);
+                cbHa.Checked = false;
+                cbXuan.Checked = false;
+                cbDong.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+            }
+            else if (cbHa.Checked == true)
+            {
+                List<SanPham> lsp = Dao.DaoSanPham.getSPSeason(2);
+                cbXuan.Checked = false;
+                cbThu.Checked = false;
+                cbDong.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+            }
+            else if (cbDong.Checked == true)
+            {
+                List<SanPham> lsp = Dao.DaoSanPham.getSPSeason(4);
+                cbHa.Checked = false;
+                cbThu.Checked = false;
+                cbXuan.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+            }
+        }
+
     }
 }
