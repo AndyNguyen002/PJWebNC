@@ -99,6 +99,8 @@
     <Content Include="bootstrap-5.0.2-dist\js\bootstrap.min.js" />
     <Content Include="ChiTietSanPham.aspx" />
     <Content Include="ChiTietSanPham.css" />
+    <Content Include="DangNhap.aspx" />
+    <Content Include="DangNhap.css" />
     <Content Include="DanhSach.aspx" />
     <Content Include="DanhSach.css" />
     <Content Include="Footer.css" />
@@ -147,6 +149,13 @@
     <Compile Include="ChiTietSanPham.aspx.designer.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangNhap.aspx.designer.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DanhSach.aspx.cs">
       <DependentUpon>DanhSach.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -155,8 +164,10 @@
       <DependentUpon>DanhSach.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dao\DaoHangSX.cs" />
+    <Compile Include="Dao\DaoNguoiDung.cs" />
     <Compile Include="Dao\DaoSanPham.cs" />
     <Compile Include="Entity\HangSX.cs" />
+    <Compile Include="Entity\NguoiDung.cs" />
     <Compile Include="Entity\SanPham.cs" />
     <Compile Include="GioiThieu.aspx.cs">
       <DependentUpon>GioiThieu.aspx</DependentUpon>
