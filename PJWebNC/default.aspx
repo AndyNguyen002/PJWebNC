@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PJWebNC.WebForm1" %>
+﻿<%@ Page Title="Trang chủ" Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PJWebNC.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tieude" runat="server">
-    <title>Trang chủ</title>
+    <title><%Response.Write(Session["FullName"]); %></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="TrangChu.css" />
@@ -73,7 +73,7 @@
 
                                                 <p><%# Eval("TenSP") %></p>
 
-                                                <h4 style="text-align: center"><%#Eval("GiaBan") %> đ</h4>
+                                                <h4 style="text-align: center"><%#Eval("GiaBan", "{0:N0}") %> đ</h4>
                                             </div>
                                                 </div>
                                         </a>
@@ -94,9 +94,9 @@
                                                 </div>
                                                 <p class="HangSX"><%# Eval("TenThuongHieu") %></p>
 
-                                                <p><%# Eval("TenSP") %></p>
+                                                <p style="text-align:center;"><%# Eval("TenSP") %></p>
 
-                                                <h4 style="text-align: center"><%#Eval("GiaBan") %> đ</h4>
+                                                <h4 style="text-align: center"><%#Eval("GiaBan", "{0:N0}") %> đ</h4>
                                             </div>
                                         </a>
                                     </ItemTemplate>
@@ -115,9 +115,9 @@
                                                 </div>
                                                 <p class="HangSX"><%# Eval("TenThuongHieu") %></p>
 
-                                                <p><%# Eval("TenSP") %></p>
+                                                <p style="text-align:center"><%# Eval("TenSP") %></p>
 
-                                                <h4 style="text-align: center"><%#Eval("GiaBan") %> đ</h4>
+                                                <h4 style="text-align: center"><%#Eval("GiaBan", "{0:N0}") %> đ</h4>
                                             </div>
                                         </a>
                                     </ItemTemplate>

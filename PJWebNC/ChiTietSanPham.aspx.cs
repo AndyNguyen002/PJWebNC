@@ -1,6 +1,9 @@
 ﻿using PJWebNC.Entity;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -33,10 +36,11 @@ namespace PJWebNC
             SanPham dd = Dao.DaoSanPham.getDacDiem(pID);
             SanPham h = Dao.DaoSanPham.getHuong(pID);
 
-
+            int money = sp.GiaBan;
+            //CultureInfo culture = CultureInfo.CreateSpecificCulture("vi-VN");
+            GiaBan.Text = money.ToString("#.#");
             ThuongHieu.Text = sp.TenThuongHieu.ToString();
             TenSP.Text = sp.TenSP.ToString();
-            GiaBan.Text = sp.GiaBan.ToString();
             GioiTinh.Text = sp.GioiTinh.ToString();
             gioitinh1.Text = sp.GioiTinh.ToString() ;
             image1.ImageUrl = sp.Anh;
@@ -54,6 +58,31 @@ namespace PJWebNC
                 HuongDau.Text = h.HuongDau;
                 HuongGiua.Text = h.HuongGiua;
                 HuongCuoi.Text = h.HuongCuoi;
+            }
+        }
+
+        protected void ThemCart_Click(object sender, EventArgs e)
+        {
+            if (Session["UserID"] == null)
+            {
+                Response.Redirect("DangNhap.aspx");
+            }
+            else
+            {
+                string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+                int pID = Convert.ToInt32(Page.Request.QueryString["id"]);
+                using (SqlConnection conn = new SqlConnection(strConnection))
+                {
+                    SqlCommand cmd = new SqlCommand(
+                        "insert into GioHang ( IDSanPham, UserID,SoLuong ) values ( @IDSanPham,  @UserID, @SoLuong)", conn);
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@IDSanPham", pID);
+                    cmd.Parameters.AddWithValue("UserID", Session["UserID"]);
+                    cmd.Parameters.AddWithValue("@SoLuong", 1);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    Response.Redirect("GioHang.aspx");
+                }
             }
         }
     }

@@ -104,6 +104,8 @@
     <Content Include="DanhSach.aspx" />
     <Content Include="DanhSach.css" />
     <Content Include="Footer.css" />
+    <Content Include="GioHang.aspx" />
+    <Content Include="GioHang.css" />
     <Content Include="GioiThieu.aspx" />
     <Content Include="GioiThieu.css" />
     <Content Include="Header.css" />
@@ -163,12 +165,21 @@
     <Compile Include="DanhSach.aspx.designer.cs">
       <DependentUpon>DanhSach.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dao\DaoGioHang.cs" />
     <Compile Include="Dao\DaoHangSX.cs" />
     <Compile Include="Dao\DaoNguoiDung.cs" />
     <Compile Include="Dao\DaoSanPham.cs" />
+    <Compile Include="Entity\GioHang.cs" />
     <Compile Include="Entity\HangSX.cs" />
     <Compile Include="Entity\NguoiDung.cs" />
     <Compile Include="Entity\SanPham.cs" />
+    <Compile Include="GioHang.aspx.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioHang.aspx.designer.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GioiThieu.aspx.cs">
       <DependentUpon>GioiThieu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

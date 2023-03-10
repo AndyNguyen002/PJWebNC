@@ -30,7 +30,7 @@
                     <div class="chucnang">
                        
                         <asp:TextBox ID="Soluong" Width="170" runat="server"></asp:TextBox> 
-                        <asp:Button ID="ThemCart" Width="420" runat="server" BackColor="black" ForeColor="white" Text="THÊM VÀO GIỎ HÀNG" />
+                        <asp:Button ID="ThemCart" Width="420" runat="server" BackColor="black" ForeColor="white" Text="THÊM VÀO GIỎ HÀNG" OnClick="ThemCart_Click" />
                     </div>
     
                     <div class="panel">
@@ -111,9 +111,9 @@
                                     </div>
                                     <p class="HangSX"><%#Eval("TenThuongHieu") %></p>
 
-                                    <p><%#Eval("TenSP") %></p>
+                                    <p style="text-align:center;"><%#Eval("TenSP") %></p>
 
-                                    <h4><%#Eval("GiaBan") %></h4>
+                                    <h4><%#Eval("GiaBan", "{0:N0} VND") %></h4>
                                 </div>
                             </a>
                         </ItemTemplate>
@@ -133,9 +133,9 @@
                                     </div>
                                     <p class="HangSX"><%#Eval("TenThuongHieu") %></p>
 
-                                    <p><%#Eval("TenSP") %></p>
+                                    <p style="text-align:center;"><%#Eval("TenSP") %></p>
 
-                                    <h4><%#Eval("GiaBan") %></h4>
+                                    <h4><%#Eval("GiaBan", "{0:N0} VND") %></h4>
                                 </div>
                             </a>
                         </ItemTemplate>

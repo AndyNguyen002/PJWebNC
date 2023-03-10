@@ -46,7 +46,7 @@
                             <li class="itemChucNang p-0">
                                 <img src="../Icon/User.png" alt=""></li>
                         </a>
-                        <a href="#">
+                        <a href="GioHang.aspx?id=<%Response.Write(Session["UserID"]); %>">
                             <li class="itemChucNang p-0">
                                 <img src="../Icon/cart.png" alt=""></li>
                         </a>

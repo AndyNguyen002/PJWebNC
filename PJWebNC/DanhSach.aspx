@@ -51,7 +51,7 @@
                                     </h3>
                                     <h3 class="nameProduct1" style="text-align:center;"><%# Eval("TenSP") %>
                                     </h3>
-                                    <h3 class="nameProduct1"><%# Eval("GiaBan") %>
+                                    <h3 class="nameProduct1"><%# Eval("GiaBan", "{0:N0} VND") %>
                                     </h3>
                                 </div>
                             </a>
