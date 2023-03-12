@@ -31,6 +31,8 @@
                     </div>
                 </ItemTemplate>
             </asp:DataList>
+            <asp:Button ID="bCapNhap" runat="server" Text="Cập nhập" Width="100" Height="50"  />
+
         </div>
         <!-- c-left -->
 
@@ -38,10 +40,10 @@
         <div class="c-right">
             <h2>Phiếu thanh toán</h2>
 
-            <div class="TongTien">
-                <h3 style="font-size: 25px;">Tạm tính</h3>
-                <h3 style="font-size: 25px; margin-left: 200px;" >
-                    <asp:Label ID="TongTien" runat="server" Text=""></asp:Label></h3>
+            <div class="TongTien" style="display:flex; flex-direction:row; justify-content:space-between">
+                <h3 style="font-size: 25px; text-align:left;">Tạm tính: </h3>
+                <h3 style="font-size: 25px;" >
+                    <asp:Label ID="TongTien"  runat="server" Text=""></asp:Label></h3>
             </div>
 
             <div class="buttonChucNang">

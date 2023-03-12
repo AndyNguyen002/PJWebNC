@@ -29,7 +29,7 @@
                     
                     <div class="chucnang">
                        
-                        <asp:TextBox ID="Soluong" Width="170" runat="server"></asp:TextBox> 
+                        <asp:TextBox ID="Soluong" Width="170" TextMode="Number" min="1" runat="server"></asp:TextBox> 
                         <asp:Button ID="ThemCart" Width="420" runat="server" BackColor="black" ForeColor="white" Text="THÊM VÀO GIỎ HÀNG" OnClick="ThemCart_Click" />
                     </div>
     
@@ -72,7 +72,7 @@
                                                 <asp:Label ID="PhatHanh" runat="server" Text="Chưa có dữ liệu"></asp:Label>
                                             </li>
                                             <li class="fs-5">Giới tính: 
-                                                <asp:Label ID="gioitinh1" runat="server" Text="Chưa có dữ liệu"></asp:Label> 
+                                                <asp:Label ID="gioitinh1" runat="server" Text="Chưa có dữ liệu"></asp:Label>
                                             </li>
                                             <li class="fs-5">Độ tuổi: 
                                                 <asp:Label ID="DoTuoi" runat="server" Text="Chưa có dữ liệu"></asp:Label>
@@ -86,13 +86,13 @@
                             </div>
                             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                                 <div class="toneHuong">
-                                        <ul>
-                                            <li class="fs-5">Phát hành: </li>
-                                            <li class="fs-5">Giới tính: </li>
-                                            <li class="fs-5">Độ tuổi: </li>
-                                            <li class="fs-5">Độ lưu mùi: </li>
-                                        </ul>
-                                    </div>
+                                    <ul>
+                                        <li class="fs-5">Phát hành: </li>
+                                        <li class="fs-5">Giới tính: </li>
+                                        <li class="fs-5">Độ tuổi: </li>
+                                        <li class="fs-5">Độ lưu mùi: </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

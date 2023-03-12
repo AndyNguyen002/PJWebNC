@@ -73,5 +73,33 @@ namespace PJWebNC.Dao
                 return objND;
             }
         }
+        public static Entity.GioHang CheckGiohang(int _userid, int _tensp)
+        {
+            Entity.GioHang objND = null;
+
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+
+            string sql = "select GioHang.IDSanPham, TenSP, SoLuong from GioHang, SanPham where GioHang.IDSanPham = SanPham.IDSanPham and UserID = '"+_userid+"' and SanPham.IDSanPham = '"+ _tensp +"'";
+
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                SqlCommand sqlCommand = new SqlCommand(sql, conn);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+
+                conn.Open();
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    objND = new Entity.GioHang();
+                    objND.IDSanPham = Convert.ToInt32(reader["IDSanPham"]);
+                    objND.SoLuong = Convert.ToInt32(reader["SoLuong"]);
+                }
+                reader.Close();//Đóng đối tượng DataReader
+                conn.Close();//Đóng kết nối
+                conn.Dispose();//Giải phóng bộ nhớ
+                return objND;
+            }
+        }
     }
 }

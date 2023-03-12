@@ -38,21 +38,21 @@ namespace PJWebNC
 
             int money = sp.GiaBan;
             //CultureInfo culture = CultureInfo.CreateSpecificCulture("vi-VN");
-            GiaBan.Text = money.ToString("#.#");
+            GiaBan.Text = money.ToString("#,#");
             ThuongHieu.Text = sp.TenThuongHieu.ToString();
             TenSP.Text = sp.TenSP.ToString();
             GioiTinh.Text = sp.GioiTinh.ToString();
-            gioitinh1.Text = sp.GioiTinh.ToString() ;
+            gioitinh1.Text = sp.GioiTinh.ToString();
             image1.ImageUrl = sp.Anh;
 
-            if(dd != null)
+            if (dd != null)
             {
                 PhatHanh.Text = dd.PhatHanh.ToString();
                 DoTuoi.Text = dd.DoTuoi.ToString();
                 DoLuuMui.Text = dd.DoLuuMui.ToString();
             }
-            
-            if(h != null)
+
+            if (h != null)
             {
                 ToneHuong.Text = h.ToneHuong;
                 HuongDau.Text = h.HuongDau;
@@ -60,7 +60,10 @@ namespace PJWebNC
                 HuongCuoi.Text = h.HuongCuoi;
             }
         }
+        protected void ValidateCart()
+        {
 
+        }
         protected void ThemCart_Click(object sender, EventArgs e)
         {
             if (Session["UserID"] == null)
@@ -69,19 +72,45 @@ namespace PJWebNC
             }
             else
             {
-                string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
                 int pID = Convert.ToInt32(Page.Request.QueryString["id"]);
-                using (SqlConnection conn = new SqlConnection(strConnection))
+                Entity.GioHang data = Dao.DaoGioHang.CheckGiohang((int)Session["UserID"], pID);
+                if (data == null)
                 {
-                    SqlCommand cmd = new SqlCommand(
-                        "insert into GioHang ( IDSanPham, UserID,SoLuong ) values ( @IDSanPham,  @UserID, @SoLuong)", conn);
-                    conn.Open();
-                    cmd.Parameters.AddWithValue("@IDSanPham", pID);
-                    cmd.Parameters.AddWithValue("UserID", Session["UserID"]);
-                    cmd.Parameters.AddWithValue("@SoLuong", 1);
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                    Response.Redirect("GioHang.aspx");
+                    string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+                    int pID1 = Convert.ToInt32(Page.Request.QueryString["id"]);
+                    using (SqlConnection conn = new SqlConnection(strConnection))
+                    {
+                        SqlCommand cmd = new SqlCommand(
+                            "insert into GioHang ( IDSanPham, UserID,SoLuong ) values ( @IDSanPham,  @UserID, @SoLuong)", conn);
+                        conn.Open();
+                        cmd.Parameters.AddWithValue("@IDSanPham", pID1);
+                        cmd.Parameters.AddWithValue("UserID", Session["UserID"]);
+                        cmd.Parameters.AddWithValue("@SoLuong", Soluong.Text);
+
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        Response.Redirect("GioHang.aspx");
+                    }
+                }
+                else
+                {
+                    string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+                    int pID1 = Convert.ToInt32(Page.Request.QueryString["id"]);
+                    using (SqlConnection conn = new SqlConnection(strConnection))
+                    {
+                        SqlCommand cmd = new SqlCommand(
+                            //"update GioHang ( IDSanPham, UserID,SoLuong ) values ( @IDSanPham,  @UserID, @SoLuong)", conn);
+                            "update GioHang  set SoLuong = SoLuong + @SoLuong where IDSanPham = @IDSanPham and UserID = @UserID", conn);
+
+                        conn.Open();
+                        cmd.Parameters.AddWithValue("@IDSanPham", pID1);
+                        cmd.Parameters.AddWithValue("UserID", Session["UserID"]);
+                        cmd.Parameters.AddWithValue("@SoLuong", Soluong.Text);
+
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        Response.Redirect("GioHang.aspx");
+                    }
                 }
             }
         }

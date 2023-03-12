@@ -15,11 +15,16 @@ namespace PJWebNC
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            
-                BindData();
 
-            
+            if (Session["UserID"] == null)
+            {
+                Response.Write("<script>alert('Vui lòng đăng nhập ') </script>");
+                Response.Redirect("DangNhap.aspx");
+
+            }
+            BindData();
+
+
             List<Entity.GioHang> lst = Dao.DaoGioHang.getAllByUser((int)Session["UserID"]);
             dtlGioHang.DataSource = lst;
             DataBind();
@@ -33,26 +38,28 @@ namespace PJWebNC
         }
         protected void bXoa_Click(object sender, EventArgs e)
         {
-            //if (Session["UserID"] == null)
-            //{
-            //    Response.Redirect("DangNhap.aspx");
-            //}
-            //else
-            //{
-            //    string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
-            //    int pID = Convert.ToInt32(Page.Request.QueryString["id"]);
-            //    using (SqlConnection conn = new SqlConnection(strConnection))
-            //    {
-            //        SqlCommand cmd = new SqlCommand(
-            //            "delete from GioHang where IDSanPham = @IDSanPham", conn);
-            //        conn.Open();
-            //        cmd.Parameters.AddWithValue("@IDSanPham",  );
-                 
-            //        cmd.ExecuteNonQuery();
-            //        conn.Close();
-            //        Response.Redirect("GioHang.aspx");
-            //    }
-            //}
+            if (Session["UserID"] == null)
+            {
+                Response.Redirect("DangNhap.aspx");
+            }
+            else
+            {
+                string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+                int pID = Convert.ToInt32(Page.Request.QueryString["id"]);
+                Label lbIDSanPham = (Label)dtlGioHang.FindControl("lbIDSanPham");
+                using (SqlConnection conn = new SqlConnection(strConnection))
+                {
+                    SqlCommand cmd = new SqlCommand(
+                        "delete from GioHang where IDSanPham = @IDSanPham and UserID = @UserID", conn);
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@IDSanPham", lbIDSanPham );
+                    cmd.Parameters.AddWithValue("@UserID", Session["UserID"] );
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    Response.Redirect("GioHang.aspx");
+                }
+            }
         }
     }
 }
