@@ -25,9 +25,10 @@ namespace PJWebNC
                 dtlDanhSachSanPham.DataSource=lstgetHsx;
                 DataBind();
             }
-
+            
             FilterGioiTinh();
             FilterSeason();
+            FilterGia();
         }
         private void FilterGioiTinh()
         {
@@ -93,6 +94,33 @@ namespace PJWebNC
                 cbHa.Checked = false;
                 cbThu.Checked = false;
                 cbXuan.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+            }
+        }
+        protected void FilterGia()
+        {
+            if(cbThap.Checked == true)
+            {
+                List<SanPham> lsp = Dao.DaoSanPham.getSPprice(1500000, 3000000);
+                cbTrungBinh.Checked = false;
+                cbCao.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+            }
+            else if (cbTrungBinh.Checked == true)
+            {
+                List<SanPham> lsp = Dao.DaoSanPham.getSPprice(3000000, 5000000);
+                cbThap.Checked = false;
+                cbCao.Checked = false;
+                dtlDanhSachSanPham.DataSource = lsp;
+                dtlDanhSachSanPham.DataBind();
+            }
+            else if (cbCao.Checked == true)
+            {
+                List<SanPham> lsp = Dao.DaoSanPham.getSPprice(5000000, 50000000);
+                cbTrungBinh.Checked = false;
+                cbThap.Checked = false;
                 dtlDanhSachSanPham.DataSource = lsp;
                 dtlDanhSachSanPham.DataBind();
             }

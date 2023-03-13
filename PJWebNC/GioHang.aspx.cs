@@ -61,5 +61,10 @@ namespace PJWebNC
                 }
             }
         }
+
+        protected void bCapNhap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

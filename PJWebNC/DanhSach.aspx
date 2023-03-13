@@ -13,7 +13,6 @@
                 <div class="c-left">
                 <div class="dsThuongHieu">
                     <h2>THƯƠNG HIỆU</h2>
-
                 </div>
                 <div class="dsGioiTinh" >
                     <h2>GIỚI TÍNH</h2>
@@ -35,7 +34,11 @@
                 </div>
                 <div class="dsGiaTien">
                     <h2>GIÁ TIỀN</h2>
-
+                    <div style="margin-left: 65px; margin-top: 25px">
+                        <asp:CheckBox ID="cbThap" Text="Thấp" Width="55" runat="server" AutoPostBack="true" />
+                        <asp:CheckBox ID="cbTrungBinh" Text="Trung bình" Width="90" runat="server" AutoPostBack="true" />
+                        <asp:CheckBox ID="cbCao" Text="Cao" Width="55" runat="server" AutoPostBack="true" />
+                    </div>
                 </div>
                 </div>
                 <div class="c-right">

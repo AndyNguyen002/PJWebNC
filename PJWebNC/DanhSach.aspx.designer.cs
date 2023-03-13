@@ -78,6 +78,33 @@ namespace PJWebNC
         protected global::System.Web.UI.WebControls.CheckBox cbDong;
 
         /// <summary>
+        /// cbThap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbThap;
+
+        /// <summary>
+        /// cbTrungBinh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbTrungBinh;
+
+        /// <summary>
+        /// cbCao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbCao;
+
+        /// <summary>
         /// dtlDanhSachSanPham control.
         /// </summary>
         /// <remarks>

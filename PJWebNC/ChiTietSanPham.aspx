@@ -29,7 +29,7 @@
                     
                     <div class="chucnang">
                        
-                        <asp:TextBox ID="Soluong" Width="170" TextMode="Number" min="1" runat="server"></asp:TextBox> 
+                        <asp:TextBox ID="Soluong" Width="170" TextMode="Number" Text="1" min="1" runat="server"></asp:TextBox> 
                         <asp:Button ID="ThemCart" Width="420" runat="server" BackColor="black" ForeColor="white" Text="THÊM VÀO GIỎ HÀNG" OnClick="ThemCart_Click" />
                     </div>
     
