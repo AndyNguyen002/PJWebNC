@@ -9,7 +9,11 @@
 <!-- Content -->
         <div class="Content" style="height:auto;">
             <p style="font-size: 50px; text-align:center">Shop</p>
-            <div class="Content1" style="height:2700px;">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <asp:UpdatePanel  ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <div class="Content1" style="height: 2700px;">
+                
                 <div class="c-left">
                 <div class="dsThuongHieu">
                     <h2>THƯƠNG HIỆU</h2>
@@ -17,9 +21,9 @@
                 <div class="dsGioiTinh" >
                     <h2>GIỚI TÍNH</h2>
                     <div style="margin-left: 55px; margin-top: 20px">
-                        <asp:CheckBox ID="cbNam" Width="65" Text="Nam" runat="server" AutoPostBack="true" />
-                        <asp:CheckBox ID="cbNu" Text="Nữ" Width="55" runat="server" AutoPostBack="true" />
-                        <asp:CheckBox ID="cbUnisex" Text="Unisex" runat="server" AutoPostBack="true" />
+                        <asp:CheckBox ID="cbNam" Width="65" Text="Nam" runat="server"  />
+                        <asp:CheckBox ID="cbNu" Text="Nữ" Width="55" runat="server"  />
+                        <asp:CheckBox ID="cbUnisex" Text="Unisex" runat="server"  />
                     </div>
                 </div>
                 <div class="dsMua">
@@ -40,29 +44,36 @@
                         <asp:CheckBox ID="cbCao" Text="Cao" Width="55" runat="server" AutoPostBack="true" />
                     </div>
                 </div>
+                    <div class="d-flex justify-content-center">
+                        <asp:Button runat="server" ID="bLoc" Text="Áp dụng" OnClick="bLoc_Click"/>
+                    </div>
                 </div>
-                <div class="c-right">
+                
                     
-                    <asp:DataList ID="dtlDanhSachSanPham" RepeatColumns="5" RepeatDirection="Horizontal" runat="server"   >
-                        <ItemTemplate>
-                            <a href="ChiTietSanPham.aspx?id=<%# Eval("IDSanPham") %>">
-                                <div class="itemProduct1">
-                                    <div class="picProduct1">
-                                        <asp:Image ID="Image1" runat="server" Width="100%" Height="100%" ImageUrl='<%# Eval("Anh") %>' />
-                                    </div>
-                                    <h3 class="HangSX1"><%# Eval("TenThuongHieu") %>
-                                    </h3>
-                                    <h3 class="nameProduct1" style="text-align:center;"><%# Eval("TenSP") %>
-                                    </h3>
-                                    <h3 class="nameProduct1"><%# Eval("GiaBan", "{0:N0} VND") %>
-                                    </h3>
-                                </div>
-                            </a>
-                        </ItemTemplate>
-                    </asp:DataList>
-      
-                    
-                </div>
+                        <div class="c-right">
+
+                            <asp:DataList ID="dtlDanhSachSanPham" RepeatColumns="5" RepeatDirection="Horizontal" runat="server">
+                                <ItemTemplate>
+                                    <a href="ChiTietSanPham.aspx?id=<%# Eval("IDSanPham") %>">
+                                        <div class="itemProduct1">
+                                            <div class="picProduct1">
+                                                <asp:Image ID="Image1" runat="server" Width="100%" Height="100%" ImageUrl='<%# Eval("Anh") %>' />
+                                            </div>
+                                            <h3 class="HangSX1"><%# Eval("TenThuongHieu") %>
+                                            </h3>
+                                            <h3 class="nameProduct1" style="text-align: center;"><%# Eval("TenSP") %>
+                                            </h3>
+                                            <h3 class="nameProduct1"><%# Eval("GiaBan", "{0:N0} VND") %>
+                                            </h3>
+                                        </div>
+                                    </a>
+                                </ItemTemplate>
+                            </asp:DataList>
+
+
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </div>
         </div>
         <!-- Content -->

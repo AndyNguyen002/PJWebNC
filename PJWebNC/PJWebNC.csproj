@@ -132,6 +132,7 @@
     <Content Include="img\XXIV-8-6-cfd0fee5.jpg" />
     <Content Include="img\XXIV-Review-Black-Afgano-ee21f154.jpg" />
     <Content Include="img\XXiV-Review-Light-Blue-Forever-ab5d164f.jpg" />
+    <Content Include="testgrid.aspx" />
     <Content Include="TrangChu.css" />
     <Content Include="Web.config" />
     <Content Include="default.aspx" />
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testgrid.aspx.cs">
+      <DependentUpon>testgrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testgrid.aspx.designer.cs">
+      <DependentUpon>testgrid.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -11,43 +11,43 @@ namespace PJWebNC
 {
 
 
-    public partial class GioHang
+    public partial class testgrid
     {
 
         /// <summary>
-        /// dtlGioHang control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dtlGioHang;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// bCapNhap control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bCapNhap;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// TongTien control.
+        /// tbSoLuong control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TongTien;
+        protected global::System.Web.UI.WebControls.TextBox tbSoLuong;
 
         /// <summary>
-        /// bThanhToan control.
+        /// bXoa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bThanhToan;
+        protected global::System.Web.UI.WebControls.Button bXoa;
     }
 }

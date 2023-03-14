@@ -23,12 +23,9 @@
                                 
                             <h2><%#Eval("GiaBan", "{0:N0}") %></h2>
                         </div>
-                        <div class="inputPD" style="display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;">
-                            <asp:TextBox ID="tbSoLuong" runat="server" Width="100" Text='<%#Eval("SoLuong") %>' ></asp:TextBox>
-                            <asp:Button ID="bXoa" runat="server" Text="Xóa sản phẩm" width="120" Height="30" CommandName="Select"/>
+                        <div class="inputPD" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                            <asp:TextBox ID="tbSoLuong" runat="server" Width="100" Text='<%#Eval("SoLuong") %>'></asp:TextBox>
+                            <asp:Button ID="bXoa" runat="server" Text="Xóa sản phẩm" Width="120" Height="30" CommandName="Select" />
                         </div>
                     </div>
                 </ItemTemplate>
@@ -50,8 +47,8 @@
                     <asp:Label ID="TongTien"  runat="server" Text=""></asp:Label></h3>
             </div>
 
-            <div class="buttonChucNang">
-                
+            <div class="buttonChucNang d-flex justify-content-center m-lg-5">
+                <asp:Button ID="bThanhToan" runat="server" Text="MUA NGAY" Height="65" Width="300" BorderWidth="0" ForeColor="White" BackColor="Red" />
             </div>
         </div>
         <!-- c-right -->

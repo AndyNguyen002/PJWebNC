@@ -526,5 +526,47 @@ namespace PJWebNC.Dao
             }
         }
 
+        public static List<SanPham> getAllFilter(
+            string sqlgioitinh="", 
+            string sqlgia1="", 
+            string sqlgia2="",
+            string sqlseason=""
+
+            )
+        {
+            List<SanPham> lstSP = new List<SanPham>();
+            //Lấy thông tin chuỗi kết nối từ Web.config
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+            //Viết câu lệnh truy vấn
+            string strSQL = "select Anh, IDSanPham, TenSP, GiaBan, TenThuongHieu, Season.Season from SanPham, ThuongHieu, Season, GioiTinh where GioiTinh.MaGioiTinh = SanPham.GioiTinh and SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and Season.MaSeason = SanPham.Season  '"+sqlgioitinh+"'  ";
+            //Định nghĩa đối tượng nnection
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                //Khởi tạo đối tượng Command
+                SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                //Mở kết nối tới CSDL
+                sqlConnection.Open();
+                //Sử dụng đối tượng DataReader để đọc dữ liệu
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                SanPham objSP = null;
+                while (sqlDataReader.Read())
+                {
+                    objSP = new SanPham();
+                    objSP.IDSanPham = Convert.ToInt32(sqlDataReader["IDSanPham"]);
+                    objSP.TenSP = Convert.ToString(sqlDataReader["TenSP"]);
+                    objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
+                    objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
+                    objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
+                    lstSP.Add(objSP);
+                }
+                sqlDataReader.Close();//Đóng đối tượng DataReader
+                sqlConnection.Close();//Đóng kết nối
+                sqlConnection.Dispose();//Giải phóng bộ nhớ
+                return lstSP;
+
+            }
+        }
+
     }
 }

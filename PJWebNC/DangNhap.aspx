@@ -23,7 +23,7 @@
                         <h5 style="font-size: 18px; margin-top: 20px">Mật khẩu</h5>
                         <asp:TextBox ID="tbMatKhaudn" Width="400" runat="server" AutoComplete="off"></asp:TextBox>
                         <div style="height: 20px"></div>
-                        <asp:Button ID="bDangNhap" Width="100" Height="55" runat="server" Text="Đăng nhập" OnClick="bDangNhap_Click" />
+                        <asp:Button ID="bDangNhap"  Width="100" Height="55" runat="server" Text="Đăng nhập" OnClick="bDangNhap_Click" ForeColor="White" BackColor="Black" />
                     </div>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">

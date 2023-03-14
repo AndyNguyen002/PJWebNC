@@ -126,5 +126,29 @@ namespace PJWebNC
             }
         }
 
+        protected void bLoc_Click(object sender, EventArgs e)
+        {
+            string gt=" ", ss=" ", g1 = " ", g2=" ";
+            
+            if(cbNam .Checked == true)
+            {
+                gt = "and MaGioiTinh = 1";
+                
+            }
+            else if(cbNu.Checked == true){
+                gt = "and MaGioiTinh = 2";
+
+            }
+            else if(cbUnisex.Checked == true)
+            {
+                gt = "and MaGioiTinh = 3";
+
+            }
+            
+
+            List<SanPham> lsp = Dao.DaoSanPham.getAllFilter( ss, g1, g2);
+            dtlDanhSachSanPham.DataSource = lsp;
+            dtlDanhSachSanPham.DataBind();
+        }
     }
 }
