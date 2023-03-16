@@ -538,7 +538,7 @@ namespace PJWebNC.Dao
             //Lấy thông tin chuỗi kết nối từ Web.config
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
             //Viết câu lệnh truy vấn
-            string strSQL = "select Anh, IDSanPham, TenSP, GiaBan, TenThuongHieu, Season.Season from SanPham, ThuongHieu, Season, GioiTinh where GioiTinh.MaGioiTinh = SanPham.GioiTinh and SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and Season.MaSeason = SanPham.Season  '"+sqlgioitinh+"'  ";
+            string strSQL = "select Anh, IDSanPham, TenSP, GiaBan, TenThuongHieu, Season.Season from SanPham, ThuongHieu, Season, GioiTinh where GioiTinh.MaGioiTinh = SanPham.GioiTinh and SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and Season.MaSeason = SanPham.Season "+" " + sqlgioitinh + " " + sqlseason + " " + sqlgia1 + " "+ sqlgia2;
             //Định nghĩa đối tượng nnection
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {

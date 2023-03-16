@@ -5,33 +5,37 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="noidung" runat="server">
+
     <!-- Content -->
     <div class="Content">
+        
         <!-- c-left -->
         <div class="c-left">
-            <h2>Sản phẩm đã chọn</h2>
-
-            <asp:DataList ID="dtlGioHang" runat="server" Width="100%" DataKeyField="IDSanPham" >
+            <h2>
+                <asp:Label ID="lbTieuDe" runat="server" Text="Sản phẩm đã chọn"></asp:Label></h2>
+            
+            <asp:DataList ID="dtlGioHang" runat="server" Width="100%" DataKeyField="IDSanPham" OnItemCommand="dtlGioHang_ItemCommand" >
                 <ItemTemplate>
                     <div class="product-grid ">
                         <div class="imgPD">
                             <img src="<%# Eval("Anh") %>" alt="">
                         </div>
                         <div class="tenPD d-flex justify-content-center align-items-lg-center">
-                            <h2> <%--<asp:Label ID="lbIDSanPham" runat="server"  Text='<%#Eval("IDSanPham") %>' ForeColor="White"></asp:Label>--%>
+                            <h2> 
                                 <%#Eval("TenSP") %> </h2>
-                                
+                           
                             <h2><%#Eval("GiaBan", "{0:N0}") %></h2>
                         </div>
-                        <div class="inputPD" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                            <asp:TextBox ID="tbSoLuong" runat="server" Width="100" Text='<%#Eval("SoLuong") %>'></asp:TextBox>
-                            <asp:Button ID="bXoa" runat="server" Text="Xóa sản phẩm" Width="120" Height="30" CommandName="Select" />
+                        <div class="inputPD" style="display: flex; justify-content: space-evenly; align-items: center; flex-direction: column;">
+                            <asp:TextBox ID="tbSoLuong" runat="server" Width="100" TextMode="Number" Min="1" Text='<%#Eval("SoLuong") %>'></asp:TextBox>
+                            <asp:Button ID="bCapNhap" runat="server" Text="Cập nhập" ForeColor="White" BackColor="Black" CommandName="Update" CommandArgument='<%# Eval("IDSanPham") %>' />
+                            <asp:Button ID="bXoa" runat="server" Text="Xóa sản phẩm" Width="120" Height="30" CommandName="Xoa" CommandArgument='<%# Eval("IDSanPham") %>' ForeColor="White" BackColor="Black" />
                         </div>
                     </div>
                 </ItemTemplate>
             </asp:DataList>
             <div class="" style="width:100%; display:flex; justify-content:center;">
-                <asp:Button ID="bCapNhap" OnClick="bCapNhap_Click" runat="server" Text="Cập nhập" Width="100" Height="50"  />
+                <asp:Button ID="bBackStore" OnClick="bCapNhap_Click" runat="server" Text="Quay lại cửa hàng" Width="150" Height="50" ForeColor="White" BackColor="Black" />
             </div>
 
         </div>
@@ -54,4 +58,5 @@
         <!-- c-right -->
     </div>
     <!-- Content -->
+
 </asp:Content>

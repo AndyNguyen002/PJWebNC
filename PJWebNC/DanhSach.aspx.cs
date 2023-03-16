@@ -25,38 +25,31 @@ namespace PJWebNC
                 dtlDanhSachSanPham.DataSource=lstgetHsx;
                 DataBind();
             }
-            
-            FilterGioiTinh();
-            FilterSeason();
-            FilterGia();
+
+            //FilterGioiTinh();
+            //FilterSeason();
+            //FilterGia();
         }
         private void FilterGioiTinh()
         {
             if(cbNam.Checked == true)
             {
-                List<SanPham> lsp = Dao.DaoSanPham.getSPGioiTinh(1);
+                
                 cbNu.Checked = false;
                 cbUnisex.Checked = false;
-                dtlDanhSachSanPham.DataSource = lsp;
-                dtlDanhSachSanPham.DataBind();
+                
                 
             }
-            else if (cbNu.Checked == true)
+            if (cbNu.Checked == true)
             {
-                List<SanPham> lsp = Dao.DaoSanPham.getSPGioiTinh(2);
                 cbNam.Checked = false;
                 cbUnisex.Checked = false;
-                dtlDanhSachSanPham.DataSource = lsp;
-                dtlDanhSachSanPham.DataBind();
             }
-            else if (cbUnisex.Checked == true)
+            if (cbUnisex.Checked == true)
             {
                 
-                List<SanPham> lsp = Dao.DaoSanPham.getSPGioiTinh(3);
                 cbNu.Checked = false;
                 cbNam.Checked = false;
-                dtlDanhSachSanPham.DataSource = lsp;
-                dtlDanhSachSanPham.DataBind();
             }
         }
         private void FilterSeason()
@@ -130,7 +123,7 @@ namespace PJWebNC
         {
             string gt=" ", ss=" ", g1 = " ", g2=" ";
             
-            if(cbNam .Checked == true)
+            if(cbNam.Checked == true)
             {
                 gt = "and MaGioiTinh = 1";
                 
@@ -144,11 +137,107 @@ namespace PJWebNC
                 gt = "and MaGioiTinh = 3";
 
             }
-            
+            else
+            {
+                gt = "";
+            }
 
-            List<SanPham> lsp = Dao.DaoSanPham.getAllFilter( ss, g1, g2);
+            if(cbXuan.Checked == true)
+            {
+                ss = " and MaSeason = 1";
+            }
+            else if (cbHa.Checked == true)
+            {
+                ss = " and MaSeason = 2";
+            }
+            else if (cbThu.Checked == true)
+            {
+                ss = " and MaSeason = 3";
+            }
+            else if (cbDong.Checked == true)
+            {
+                ss = " and MaSeason = 4";
+            }
+            else
+            {
+                ss = "";
+            }
+
+            if(cbThap.Checked == true)
+            {
+                g1 = " and GiaBan > 1500000 ";
+                g2= " and GiaBan < 3000000 ";
+            }
+            else if (cbTrungBinh.Checked == true)
+            {
+                g1 = " and GiaBan > 3000000 ";
+                g2 = " and GiaBan < 5000000 ";
+            }
+            else if (cbCao.Checked == true)
+            {
+                g1 = " and GiaBan > 5000000 ";
+                g2 = " and GiaBan < 500000000 ";
+            }
+            else
+            {
+                g1 = "";
+                g2 = "";
+            }
+
+            List<SanPham> lsp = Dao.DaoSanPham.getAllFilter(gt, ss, g1, g2);
             dtlDanhSachSanPham.DataSource = lsp;
             dtlDanhSachSanPham.DataBind();
+
+        }
+
+        protected void bHuyLoc_Click(object sender, EventArgs e)
+        {
+            cbNam.Checked = false;
+            cbNu.Checked = false;
+            cbUnisex.Checked = false;
+            cbXuan.Checked = false;
+            cbHa.Checked = false;
+            cbThu.Checked = false;
+            cbDong.Checked = false;
+            cbThap.Checked = false;
+            cbTrungBinh.Checked = false;
+            cbCao.Checked = false;
+        }
+
+        protected void cbNam_OnClick(object sender, EventArgs e)
+        {
+            if(cbNam.Checked == true)
+            {
+                cbNu.Checked = false;
+                cbUnisex.Checked= false;
+            }
+        }
+
+        protected void cbNam_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbNam.Checked)
+            {
+                cbNu.Checked = false;
+                cbUnisex.Checked = false;
+            }
+        }
+
+        protected void cbNu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbNu.Checked)
+            {
+                cbNam.Checked = false;
+                cbUnisex.Checked = false;
+            }
+        }
+
+        protected void cbUnisex_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbUnisex.Checked)
+            {
+                cbNu.Checked = false;
+                cbNam.Checked = false;
+            }
         }
     }
 }

@@ -132,6 +132,15 @@ namespace PJWebNC
         protected global::System.Web.UI.WebControls.Button bLoc;
 
         /// <summary>
+        /// bHuyLoc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button bHuyLoc;
+
+        /// <summary>
         /// dtlDanhSachSanPham control.
         /// </summary>
         /// <remarks>

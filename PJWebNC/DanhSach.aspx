@@ -21,31 +21,33 @@
                 <div class="dsGioiTinh" >
                     <h2>GIỚI TÍNH</h2>
                     <div style="margin-left: 55px; margin-top: 20px">
-                        <asp:CheckBox ID="cbNam" Width="65" Text="Nam" runat="server"  />
-                        <asp:CheckBox ID="cbNu" Text="Nữ" Width="55" runat="server"  />
-                        <asp:CheckBox ID="cbUnisex" Text="Unisex" runat="server"  />
+                        <asp:CheckBox ID="cbNam" Width="65" Text="Nam" runat="server" OnCheckedChanged="cbNam_CheckedChanged"  />
+                        <asp:CheckBox ID="cbNu" Text="Nữ" Width="55" runat="server" OnCheckedChanged="cbNu_CheckedChanged"  />
+                        <asp:CheckBox ID="cbUnisex" Text="Unisex" runat="server" OnCheckedChanged="cbUnisex_CheckedChanged"  />
                     </div>
                 </div>
                 <div class="dsMua">
                     <h2>MÙA</h2>
                     <div style="margin-left: 55px; margin-top: 25px">
 
-                        <asp:CheckBox ID="cbXuan" Text="Xuân" Width="55" runat="server" AutoPostBack="true" />
-                        <asp:CheckBox ID="cbHa" Width="40" runat="server" Text="Hạ" AutoPostBack="true" />
-                        <asp:CheckBox ID="cbThu" Width="50" runat="server" Text="Thu" AutoPostBack="true" />
-                        <asp:CheckBox ID="cbDong" Width="55" runat="server" Text="Đông" AutoPostBack="true" />
+                        <asp:CheckBox ID="cbXuan" Text="Xuân" Width="55" runat="server"  />
+                        <asp:CheckBox ID="cbHa" Width="40" runat="server" Text="Hạ" />
+                        <asp:CheckBox ID="cbThu" Width="50" runat="server" Text="Thu"  />
+                        <asp:CheckBox ID="cbDong" Width="55" runat="server" Text="Đông" />
                     </div>
                 </div>
                 <div class="dsGiaTien">
                     <h2>GIÁ TIỀN</h2>
                     <div style="margin-left: 65px; margin-top: 25px">
-                        <asp:CheckBox ID="cbThap" Text="Thấp" Width="55" runat="server" AutoPostBack="true" />
-                        <asp:CheckBox ID="cbTrungBinh" Text="Trung bình" Width="90" runat="server" AutoPostBack="true" />
-                        <asp:CheckBox ID="cbCao" Text="Cao" Width="55" runat="server" AutoPostBack="true" />
+                        <asp:CheckBox ID="cbThap" Text="Thấp" Width="55" runat="server"  />
+                        <asp:CheckBox ID="cbTrungBinh" Text="Trung bình" Width="90" runat="server"  />
+                        <asp:CheckBox ID="cbCao" Text="Cao" Width="55" runat="server"  />
                     </div>
                 </div>
-                    <div class="d-flex justify-content-center">
-                        <asp:Button runat="server" ID="bLoc" Text="Áp dụng" OnClick="bLoc_Click"/>
+                    <div class="d-flex justify-content-evenly">
+                        <asp:Button runat="server" ID="bLoc" Text="Áp dụng" OnClick="bLoc_Click" ForeColor="White" BackColor="Black"/>
+                        <asp:Button runat="server" ID="bHuyLoc" Text="Hủy" OnClick="bHuyLoc_Click" ForeColor="White" BackColor="Black"/>
+
                     </div>
                 </div>
                 
@@ -75,6 +77,6 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
-        </div>
+        <%--</div>--%>
         <!-- Content -->
 </asp:Content>

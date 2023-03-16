@@ -2,8 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="tieude" runat="server">
     <title><%Response.Write(Session["FullName"]); %></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="TrangChu.css" />
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="noidung" runat="server">
     <!-- content -->
@@ -40,7 +41,7 @@
                 <div class="typeProduct">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" style="background-color:white" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                            <button class="nav-link active hover" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
                                 <h3>Nước hoa nam</h3>
                             </button>
                         </li>
@@ -64,7 +65,7 @@
                                 <asp:DataList ID="SanPham" runat="server" RepeatDirection="Horizontal">
                                     <ItemTemplate>
                                         <a href="ChiTietSanPham.aspx?id=<%#Eval("IDSanPham") %>">
-                                            <div class="swiper-slide">
+                                            
                                             <div class="itemProduct">
                                                 <div class="picProduct">
                                                     <asp:Image ID="img1" runat="server" Width="200" Height="250" ImageUrl='<%# Eval("Anh") %>' />
@@ -75,7 +76,7 @@
 
                                                 <h4 style="text-align: center"><%#Eval("GiaBan", "{0:N0}") %> đ</h4>
                                             </div>
-                                                </div>
+                                               
                                         </a>
                                     </ItemTemplate>
                                 </asp:DataList>
@@ -134,7 +135,7 @@
             <!--Video  -->
             <p>Perfume bar đầu tiên tại Việt Nam</p>
             <iframe width="1200" height="675" src="https://www.youtube.com/embed/Fiycfl4sJYE" title="Perfume Bar Đầu Tiên Tại Việt Nam! | Đập Hộp Nút Bạc Youtube | Hoàng XXIV"
-             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true"></iframe>
             <!--Video  -->
 
 
