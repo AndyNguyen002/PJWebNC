@@ -15,7 +15,7 @@ namespace PJWebNC
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         
@@ -49,11 +49,14 @@ namespace PJWebNC
             if (tbMatKhaudk.Text != tbReMatKhaudk.Text)
             {
                 Response.Write("<script>alert('Mật khẩu nhập vào không trùng khớp ') </script>");
+                Response.Redirect("DangNhap.aspx");
                 return false;
             }
             else if (tbTaiKhoandk.Text == "" || tbMatKhaudk.Text == "" || tbReMatKhaudk.Text == "")
             {
                 Response.Write("<script>alert('Nhập đủ thông tin trước khi đăng ký ') </script>");
+                Response.Redirect("DangNhap.aspx");
+
                 return false;
             }
             else
@@ -84,6 +87,8 @@ namespace PJWebNC
                     Page.Session["FullName"] = ND.FullName;
                     Page.Session["UserID"] = ND.UserID;
                     Page.Session["VaiTro"] = ND.VaiTro;
+                    Page.Session["TaiKhoan"] = ND.TaiKhoan;
+                    Page.Session["MatKhau"] = ND.MatKhau;
                     Response.Redirect("default.aspx");
                 }
             }

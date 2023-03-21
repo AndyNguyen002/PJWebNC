@@ -58,7 +58,7 @@ namespace PJWebNC
         protected void bCapNhap_Click(object sender, EventArgs e)
         {
             
-                Response.Redirect("default.aspx");
+                Response.Redirect("DanhSach.aspx");
             
         }
         protected void dtlGioHang_ItemCommand(object source, DataListCommandEventArgs e)

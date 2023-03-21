@@ -30,7 +30,7 @@
                     <div class="chucnang">
                        
                         <asp:TextBox ID="Soluong" Width="170" TextMode="Number" Text="1" min="1" runat="server"></asp:TextBox> 
-                        <asp:Button ID="ThemCart" Width="420" runat="server" BackColor="black" ForeColor="white" Text="THÊM VÀO GIỎ HÀNG" OnClick="ThemCart_Click" />
+                        <asp:Button ID="ThemCart" Width="420" runat="server" BackColor="black" ForeColor="white" Text="THÊM VÀO GIỎ HÀNG" OnClick="ThemCart_Click" BorderWidth="0"/>
                     </div>
     
                     <div class="panel">
@@ -85,12 +85,12 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                <div class="toneHuong">
-                                    <ul>
-                                        <li class="fs-5">Phát hành: </li>
-                                        <li class="fs-5">Giới tính: </li>
-                                        <li class="fs-5">Độ tuổi: </li>
-                                        <li class="fs-5">Độ lưu mùi: </li>
+                                <div class="toneHuong" style="display:flex; flex-direction: row">
+                                    <%--<p class="fs-5" style="margin-left:20px">Mùa:</p> --%>
+                                    <ul class="" >
+                                        <li class="fs-5">Ngày: /10</li>
+                                        <li class="fs-5">Đêm: /10</li>
+                                        
                                     </ul>
                                 </div>
                             </div>

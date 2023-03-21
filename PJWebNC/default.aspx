@@ -4,7 +4,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="TrangChu.css" />
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="noidung" runat="server">
     <!-- content -->
@@ -21,7 +20,7 @@
                             <ItemTemplate>
                                 <a href="DanhSach.aspx?id=<%#Eval("MaThuongHieu") %>">
                                     <div class="itemBrand" style="display:flex; justify-content:center; align-items:center">
-                                    <asp:Image ID="LogoBrandLabel" runat="server" Width="160" Height="160" ImageUrl='<%# Eval("LogoBrand") %>' />
+                                    <asp:Image ID="LogoBrandLabel" runat="server" Width="160" MaxHeight="160" ImageUrl='<%# Eval("LogoBrand") %>' />
                                 </div>
                                 </a>
                             </ItemTemplate>

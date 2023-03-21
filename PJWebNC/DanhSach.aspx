@@ -12,7 +12,7 @@
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <asp:UpdatePanel  ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
-                        <div class="Content1" style="height: 2700px;">
+                        <div class="Content1" style="height: auto;">
                 
                 <div class="c-left">
                 <div class="dsThuongHieu">
@@ -30,7 +30,7 @@
                     <h2>MÙA</h2>
                     <div style="margin-left: 55px; margin-top: 25px">
 
-                        <asp:CheckBox ID="cbXuan" Text="Xuân" Width="55" runat="server"  />
+                        <asp:CheckBox ID="cbXuan" Text="Xuân" Width="55" runat="server" />
                         <asp:CheckBox ID="cbHa" Width="40" runat="server" Text="Hạ" />
                         <asp:CheckBox ID="cbThu" Width="50" runat="server" Text="Thu"  />
                         <asp:CheckBox ID="cbDong" Width="55" runat="server" Text="Đông" />
@@ -77,6 +77,6 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
-        <%--</div>--%>
+        </div>
         <!-- Content -->
 </asp:Content>

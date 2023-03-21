@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace PJWebNC
 {
-    public partial class testgrid : System.Web.UI.Page
+    public partial class TaiKhoan : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
