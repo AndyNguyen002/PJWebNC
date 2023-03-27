@@ -122,13 +122,14 @@
                                                     <span class="password-input">
                                                         <%--<input type="password" class="AccountForm-Input AccountForm-Input--password input-text" name="password_2" id="password_2" autocomplete="off">--%><span class="show-password-input"></span></span>
                                                         <asp:TextBox ID="tbRePass" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server"></asp:TextBox>
+                                                        <asp:Label ID="lbMessage" runat="server" Text="" ></asp:Label>
                                                 </p>
                                             </fieldset>
                                             <div class="clear"></div>
                                             <p>
                                                 <input type="hidden" id="save-account-details-nonce" name="save-account-details-nonce" value="8a5c9c78df"><input type="hidden" name="_wp_http_referer" value="/my-account/edit-account/">
                                                 <%--<button type="submit" class="AccountForm-Button button" name="save_account_details" value="Lưu thay đổi">Lưu thay đổi</button>--%>
-                                                <asp:Button ID="bSave" CssClass="AccountForm-Button button" runat="server" Text="Lưu thay đổi" />
+                                                <asp:Button ID="bSave" CssClass="AccountForm-Button button" OnClick="bSave_Click" runat="server" Text="Lưu thay đổi" />
                                                 <input type="hidden" name="action" value="save_account_details">
                                             </p>
                                         </form>

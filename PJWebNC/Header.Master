@@ -43,7 +43,7 @@
                 <!-- ChucNang -->
                 <div class="ChucNang p-0 ">
                     <ul style="display: flex; flex-direction: row; margin: 0px;" class="p-0">
-                        <a href="profile.aspx">
+                        <a href="QLyTaiKhoan.aspx">
                             <li class="itemChucNang p-0">
                                 <img src="../Icon/User.png" alt=""></li>
                         </a>

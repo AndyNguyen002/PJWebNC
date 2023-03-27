@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PJWebNC.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,6 +28,22 @@ namespace PJWebNC
         {
             Session.Clear();
             Response.Redirect("DangNhap.aspx");
+        }
+        protected bool ValidateChangePass()
+        {
+            if (tbPassCurrent.Text != (string)Session["MatKhau"])
+            {
+                lbMessage.Text = "Mật khẩu hiện tại không chính xác";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        protected void bSave_Click(object sender, EventArgs e)
+        {
+            ValidateChangePass();
         }
     }
 }

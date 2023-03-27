@@ -37,55 +37,55 @@
                                 </ul>
                             </nav>
 
-                            <div class="menu-QuanLyTaiKhoan-content">
+                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                                 <div class="menu-QuanLyTaiKhoan-navigation-wrapper"></div>
                                 <form class="EditAccountForm edit-account">
 
-	
-                                    <p class="AccountForm-form-row AccountForm-form-row--first form-row form-row-first">
-                                        <label for="account_first_name">Tên&nbsp;<span class="required">*</span></label>
-                                        <input type="text" class="AccountForm-Input AccountForm-Input--text input-text" name="account_first_name" id="account_first_name" autocomplete="given-name" value="">
-                                    </p>
-                                    <p class="AccountForm-form-row AccountForm-form-row--last form-row form-row-last">
-                                        <label for="account_last_name">Họ&nbsp;<span class="required">*</span></label>
-                                        <input type="text" class="AccountForm-Input AccountForm-Input--text input-text" name="account_last_name" id="account_last_name" autocomplete="family-name" value="">
-                                    </p>
-                                    <div class="clear"></div>
-                                
+
+
+
+
                                     <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
                                         <label for="account_display_name">Tên hiển thị&nbsp;<span class="required">*</span></label>
-                                        <input type="text" class="AccountForm-Input AccountForm-Input--text input-text" name="account_display_name" id="account_display_name" value=""> 
+                                        <asp:TextBox ID="tbFullName" CssClass="AccountForm-Input AccountForm-Input--text input-text" runat="server"></asp:TextBox>
+                                        <%--<input type="text" class="AccountForm-Input AccountForm-Input--text input-text" name="account_display_name" id="account_display_name" value="">--%>
                                         <span><em>Tên này sẽ hiển thị trong trang Tài khoản và phần Đánh giá sản phẩm</em></span>
                                     </p>
                                     <div class="clear"></div>
-                                
-                                    <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
-                                        <label for="account_email">Địa chỉ email&nbsp;<span class="required">*</span></label>
-                                        <input type="email" class="AccountForm-Input AccountForm-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="">
-                                    </p>
-                                
-                                    <fieldset>
+
+                                    <%--<p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
+                                                <label for="account_email">Địa chỉ email&nbsp;<span class="required">*</span></label>
+                                                <input type="email" class="AccountForm-Input AccountForm-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="">
+                                                <asp:TextBox ID="tbEmail" runat="server"></asp:TextBox>
+                                            </p>--%>
+
+                                    <fieldset style="border: 1px solid; padding: 10px;">
                                         <legend>Thay đổi mật khẩu</legend>
-                                
+
                                         <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
                                             <label for="password_current">Mật khẩu hiện tại (bỏ trống nếu không đổi)</label>
-                                            <span class="password-input"><input type="password" class="AccountForm-Input AccountForm-Input--password input-text" name="password_current" id="password_current" autocomplete="off"><span class="show-password-input"></span></span>
+                                            <span class="password-input">
+                                            <asp:TextBox ID="tbPassCurrent" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
                                         </p>
                                         <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
                                             <label for="password_1">Mật khẩu mới (bỏ trống nếu không đổi)</label>
-                                            <span class="password-input"><input type="password" class="AccountForm-Input AccountForm-Input--password input-text" name="password_1" id="password_1" autocomplete="off"><span class="show-password-input"></span></span>
+                                            <span class="password-input">
+                                            <asp:TextBox ID="tbNewPass" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
                                         </p>
                                         <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
                                             <label for="password_2">Xác nhận mật khẩu mới</label>
-                                            <span class="password-input"><input type="password" class="AccountForm-Input AccountForm-Input--password input-text" name="password_2" id="password_2" autocomplete="off"><span class="show-password-input"></span></span>
+                                            <span class="password-input">
+                                            <asp:TextBox ID="tbRePass" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
+                                            <asp:Label ID="lbMessage" runat="server" Text="" ></asp:Label>
                                         </p>
                                     </fieldset>
                                     <div class="clear"></div>
                                     <p>
-                                        <input type="hidden" id="save-account-details-nonce" name="save-account-details-nonce" value="8a5c9c78df"><input type="hidden" name="_wp_http_referer" value="/my-account/edit-account/">		<button type="submit" class="AccountForm-Button button" name="save_account_details" value="Lưu thay đổi">Lưu thay đổi</button>
+                                        <input type="hidden" id="save-account-details-nonce" name="save-account-details-nonce" value="8a5c9c78df"><input type="hidden" name="_wp_http_referer" value="/my-account/edit-account/">
+                                        <asp:Button ID="bSave" CssClass="AccountForm-Button button" OnClick="bSave_Click" runat="server" Text="Lưu thay đổi" ForeColor="Red" />
                                         <input type="hidden" name="action" value="save_account_details">
                                     </p>
-                                    </form>
+                                </form>
                             </div>
 
                             

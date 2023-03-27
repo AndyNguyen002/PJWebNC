@@ -204,15 +204,6 @@ namespace PJWebNC
             cbCao.Checked = false;
         }
 
-        protected void cbNam_OnClick(object sender, EventArgs e)
-        {
-            if(cbNam.Checked == true)
-            {
-                cbNu.Checked = false;
-                cbUnisex.Checked= false;
-            }
-        }
-
         protected void cbNam_CheckedChanged(object sender, EventArgs e)
         {
             if (cbNam.Checked)
@@ -235,9 +226,76 @@ namespace PJWebNC
         {
             if (cbUnisex.Checked)
             {
-                cbNu.Checked = false;
                 cbNam.Checked = false;
+                cbNu.Checked = false;
             }
         }
+
+        protected void cbXuan_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbXuan.Checked)
+            {
+                cbHa.Checked = false;
+                cbThu.Checked = false;
+                cbDong.Checked = false;
+            }
+        }
+
+        protected void cbHa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbHa.Checked)
+            {
+                cbXuan.Checked = false;
+                cbThu.Checked = false;
+                cbDong.Checked = false;
+            }
+        }
+
+        protected void cbThu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbThu.Checked)
+            {
+                cbXuan.Checked = false;
+                cbHa.Checked = false;
+                cbDong.Checked = false;
+            }
+        }
+
+        protected void cbDong_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbDong.Checked)
+            {
+                cbXuan.Checked = false;
+                cbHa.Checked = false;
+                cbThu.Checked = false;
+            }
+        }
+        protected void cbThap_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbThap.Checked)
+            {
+                cbTrungBinh.Checked = false;
+                cbCao.Checked = false;
+            }
+        }
+
+        protected void cbTrungBinh_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbTrungBinh.Checked)
+            {
+                cbThap.Checked = false;
+                cbCao.Checked = false;
+            }
+        }
+
+        protected void cbCao_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbCao.Checked)
+            {
+                cbThap.Checked = false;
+                cbTrungBinh.Checked = false;
+            }
+        }
+
     }
 }
