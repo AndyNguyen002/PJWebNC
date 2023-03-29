@@ -45,6 +45,7 @@ namespace PJWebNC
             gioitinh1.Text = sp.GioiTinh.ToString();
             image1.ImageUrl = sp.Anh;
 
+
             if (dd != null)
             {
                 PhatHanh.Text = dd.PhatHanh.ToString();
@@ -59,10 +60,6 @@ namespace PJWebNC
                 HuongGiua.Text = h.HuongGiua;
                 HuongCuoi.Text = h.HuongCuoi;
             }
-        }
-        protected void ValidateCart()
-        {
-
         }
         protected void ThemCart_Click(object sender, EventArgs e)
         {

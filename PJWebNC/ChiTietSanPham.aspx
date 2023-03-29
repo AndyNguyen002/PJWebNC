@@ -12,9 +12,10 @@
                         <div class="imgTop">
                             <asp:Image runat="server" ID="image1" Width="400px" Height="400px" />
                         </div>
-                        <div class="imgBot">
-    
-                        </div>
+                        <%--<div class="imgBot">
+                            <asp:Image runat="server" ID="image2" Width="100px" Height="100px"  />
+                            
+                        </div>--%>
                     </div>
                     <h3 style="font-size: 33px; margin: 20px 0px;">MÔ TẢ</h3>
                     <p style="font-size: 18px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas adipisci quasi facere repellat quod nesciunt, perferendis, minus laudantium repudiandae soluta facilis blanditiis eius itaque corrupti, in debitis vero perspiciatis illum.</p>

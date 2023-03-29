@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" CodeBehind="TaiKhoan.aspx.cs" Inherits="PJWebNC.TaiKhoan" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tieude" runat="server">
-    <link rel="stylesheet" href="TaiKhoan.css" />
+    <link rel="stylesheet" href="TaiKhoan.css" type="text/css"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="noidung" runat="server">
     <div class="section-TaiKhoan">
@@ -48,16 +48,11 @@
                                     <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
                                         <label for="account_display_name">Tên hiển thị&nbsp;<span class="required">*</span></label>
                                         <asp:TextBox ID="tbFullName" CssClass="AccountForm-Input AccountForm-Input--text input-text" runat="server"></asp:TextBox>
-                                        <%--<input type="text" class="AccountForm-Input AccountForm-Input--text input-text" name="account_display_name" id="account_display_name" value="">--%>
                                         <span><em>Tên này sẽ hiển thị trong trang Tài khoản và phần Đánh giá sản phẩm</em></span>
                                     </p>
                                     <div class="clear"></div>
 
-                                    <%--<p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
-                                                <label for="account_email">Địa chỉ email&nbsp;<span class="required">*</span></label>
-                                                <input type="email" class="AccountForm-Input AccountForm-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="">
-                                                <asp:TextBox ID="tbEmail" runat="server"></asp:TextBox>
-                                            </p>--%>
+                                    
 
                                     <fieldset style="border: 1px solid; padding: 10px;">
                                         <legend>Thay đổi mật khẩu</legend>
@@ -73,7 +68,7 @@
                                             <asp:TextBox ID="tbNewPass" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
                                         </p>
                                         <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
-                                            <label for="password_2">Xác nhận mật khẩu mới</label>
+                                            <label for="password_2">Xác nhận mật khẩu mới (bỏ trống nếu không đổi)</label>
                                             <span class="password-input">
                                             <asp:TextBox ID="tbRePass" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
                                             <asp:Label ID="lbMessage" runat="server" Text="" ></asp:Label>

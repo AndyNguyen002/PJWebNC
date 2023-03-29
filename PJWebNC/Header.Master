@@ -10,6 +10,13 @@
     <title></title>
     <link href="Footer.css" rel="stylesheet" />
     <link rel="icon" href="Icon/perfume.png"  />
+    <style>
+        .active1 {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+    
 
 </head>
 <body>
@@ -186,7 +193,28 @@
                     </div>
                 </div>
                 <!-- End footer -->
-            
+            <script>
+                // Lấy đường dẫn của trang hiện tại
+                var path = window.location.pathname;
+
+                // Lặp qua tất cả các thẻ li trong danh sách menu
+                var menuItems = document.querySelectorAll('.itemDanhMuc');
+                for (var i = 0; i < menuItems.length; i++) {
+                    var menuItem = menuItems[i];
+
+                    // Lấy href của thẻ a bên trong thẻ li
+                    var href = menuItem.querySelector('a').getAttribute('href');
+
+                    // So sánh href với đường dẫn của trang hiện tại
+                    if (href === path) {
+                        // Nếu trùng, thêm lớp CSS active vào thẻ li
+                        menuItem.classList.add('active1');
+                    } else {
+                        // Nếu khác, loại bỏ lớp CSS active khỏi thẻ li (nếu có)
+                        menuItem.classList.remove('active1');
+                    }
+                }
+            </script>
         </div>
     </form>
 </body>
