@@ -24,13 +24,13 @@ namespace PJWebNC
         protected global::System.Web.UI.WebControls.TextBox tbFullName;
 
         /// <summary>
-        /// tbPassCurrent control.
+        /// tbCurrentPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbPassCurrent;
+        protected global::System.Web.UI.WebControls.TextBox tbCurrentPass;
 
         /// <summary>
         /// tbNewPass control.
@@ -60,12 +60,21 @@ namespace PJWebNC
         protected global::System.Web.UI.WebControls.Label lbMessage;
 
         /// <summary>
-        /// bSave control.
+        /// bLuu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bSave;
+        protected global::System.Web.UI.WebControls.Button bLuu;
+
+        /// <summary>
+        /// lbTest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbTest;
     }
 }

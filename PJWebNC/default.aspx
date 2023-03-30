@@ -1,6 +1,6 @@
-﻿<%@ Page Title="Trang chủ" Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PJWebNC.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PJWebNC.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tieude" runat="server">
-    <title><%Response.Write(Session["FullName"]); %></title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="TrangChu.css" />

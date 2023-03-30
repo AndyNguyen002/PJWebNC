@@ -60,7 +60,7 @@
                                         <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
                                             <label for="password_current">Mật khẩu hiện tại (bỏ trống nếu không đổi)</label>
                                             <span class="password-input">
-                                            <asp:TextBox ID="tbPassCurrent" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
+                                            <asp:TextBox ID="tbCurrentPass" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
                                         </p>
                                         <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
                                             <label for="password_1">Mật khẩu mới (bỏ trống nếu không đổi)</label>
@@ -77,8 +77,10 @@
                                     <div class="clear"></div>
                                     <p>
                                         <input type="hidden" id="save-account-details-nonce" name="save-account-details-nonce" value="8a5c9c78df"><input type="hidden" name="_wp_http_referer" value="/my-account/edit-account/">
-                                        <asp:Button ID="bSave" CssClass="AccountForm-Button button" OnClick="bSave_Click" runat="server" Text="Lưu thay đổi" ForeColor="Red" />
+                                        <asp:Button ID="bLuu" runat="server" CssClass="AccountForm-Button button" Text="Save" OnClick="bLuu_Click"/>
+
                                         <input type="hidden" name="action" value="save_account_details">
+                                        <asp:Label ID="lbTest" runat="server" Text="qwe"></asp:Label>
                                     </p>
                                 </form>
                             </div>

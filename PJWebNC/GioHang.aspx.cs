@@ -102,10 +102,7 @@ namespace PJWebNC
                     
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                    BindData();
-                    List<Entity.GioHang> lst = Dao.DaoGioHang.getAllByUser((int)Session["UserID"]);
-                    dtlGioHang.DataSource = lst;
-                    DataBind();
+                    
                 }
             }
             
