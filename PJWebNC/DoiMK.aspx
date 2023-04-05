@@ -1,6 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" CodeBehind="TaiKhoan.aspx.cs" Inherits="PJWebNC.TaiKhoan" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Header.Master" AutoEventWireup="true" CodeBehind="DoiMK.aspx.cs" Inherits="PJWebNC.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tieude" runat="server">
+
     <link rel="stylesheet" href="TaiKhoan.css" type="text/css"/>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="noidung" runat="server">
     <div class="section-TaiKhoan">
@@ -44,26 +46,31 @@
                                 <div class="menu-QuanLyTaiKhoan-navigation-wrapper"></div>
                                 <form class="EditAccountForm edit-account">
 
+                                    <fieldset style="border: 1px solid; padding: 10px; width:682px">
+                                        <legend>Thay đổi mật khẩu</legend>
 
-
-
-
-                                    <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
-                                        <label for="account_display_name">Tên hiển thị&nbsp;<span class="required">*</span></label>
-                                        <asp:TextBox ID="tbFullName" CssClass="AccountForm-Input AccountForm-Input--text input-text" runat="server"></asp:TextBox>
-                                        <span><em>Tên này sẽ hiển thị trong trang Tài khoản và phần Đánh giá sản phẩm</em></span>
-                                    </p>
+                                        <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
+                                            <label for="password_current">Mật khẩu hiện tại </label>
+                                            <span class="password-input">
+                                            <asp:TextBox ID="tbCurrentPass" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
+                                        </p>
+                                        <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
+                                            <label for="password_1">Mật khẩu mới </label>
+                                            <span class="password-input">
+                                            <asp:TextBox ID="tbNewPass" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
+                                        </p>
+                                        <p class="AccountForm-form-row AccountForm-form-row--wide form-row form-row-wide">
+                                            <label for="password_2">Xác nhận mật khẩu mới</label>
+                                            <span class="password-input">
+                                            <asp:TextBox ID="tbRePass" CssClass="AccountForm-Input AccountForm-Input--password input-text" runat="server" TextMode="Password"></asp:TextBox>
+                                            <asp:Label ID="lbMessage" runat="server"  ></asp:Label>
+                                        </p>
+                                    </fieldset>
                                     <div class="clear"></div>
-
-                                    
-
-                                    
                                     <p>
-                                        <input type="hidden" id="save-account-details-nonce" name="save-account-details-nonce" value="8a5c9c78df"><input type="hidden" name="_wp_http_referer" value="/my-account/edit-account/">
                                         <asp:Button ID="bLuu" runat="server" CssClass="AccountForm-Button button" Text="Save" OnClick="bLuu_Click"/>
 
                                         <input type="hidden" name="action" value="save_account_details">
-                                        
                                     </p>
                                 </form>
                             </div>

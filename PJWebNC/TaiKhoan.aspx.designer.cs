@@ -24,42 +24,6 @@ namespace PJWebNC
         protected global::System.Web.UI.WebControls.TextBox tbFullName;
 
         /// <summary>
-        /// tbCurrentPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbCurrentPass;
-
-        /// <summary>
-        /// tbNewPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbNewPass;
-
-        /// <summary>
-        /// tbRePass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbRePass;
-
-        /// <summary>
-        /// lbMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbMessage;
-
-        /// <summary>
         /// bLuu control.
         /// </summary>
         /// <remarks>
@@ -67,14 +31,5 @@ namespace PJWebNC
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button bLuu;
-
-        /// <summary>
-        /// lbTest control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbTest;
     }
 }

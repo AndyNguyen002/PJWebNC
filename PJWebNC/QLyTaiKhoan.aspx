@@ -32,7 +32,10 @@
                                         <a href="QlyDiaChi.aspx">Địa chỉ</a>
                                     </li>
                                     <li class="menu-QuanLyTaiKhoan-navigation-link menu-QuanLyTaiKhoan-navigation-link--edit-account">
-                                        <a href="TaiKhoan.aspx">Tài khoản</a>
+                                        <a href="TaiKhoan.aspx">Đổi tên người dùng</a>
+                                    </li>
+                                    <li class="menu-QuanLyTaiKhoan-navigation-link menu-QuanLyTaiKhoan-navigation-link--edit-account">
+                                        <a href="DoiMK.aspx">Đổi mật khẩu</a>
                                     </li>
                                     <li class="menu-QuanLyTaiKhoan-navigation-link menu-QuanLyTaiKhoan-navigation-link--customer-logout">
                                         <a href="SignOut.aspx">Thoát</a>
