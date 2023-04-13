@@ -12,7 +12,8 @@ namespace PJWebNC.Entity
         public int MaThuongHieu { get; set; }
         public int GiaBan { get; set; }
         public string GioiTinh { get; set; }
-        public int Season { get; set; }
+        public string Season { get; set; }
+        //public int Season { get; set; }
         public string Anh { get; set; }
         public int Hot { get; set; }
         public int Huong { get; set; }

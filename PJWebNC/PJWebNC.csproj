@@ -73,30 +73,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\default.aspx" />
+    <Content Include="Admin\QlyNguoiDung.aspx" />
+    <Content Include="Admin\QlySanPham.aspx" />
+    <Content Include="Admin\SuaSanPham.aspx" />
+    <Content Include="Admin\ThemSanPham.aspx" />
+    <Content Include="Admin\XoaSanPham.aspx" />
     <Content Include="Blog.aspx" />
     <Content Include="Blog.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.min.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.min.js" />
     <Content Include="ChiTietSanPham.aspx" />
     <Content Include="ChiTietSanPham.css" />
     <Content Include="DangNhap.aspx" />
@@ -145,6 +129,55 @@
     <Content Include="DoiMK.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QlyNguoiDung.aspx.cs">
+      <DependentUpon>QlyNguoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QlyNguoiDung.aspx.designer.cs">
+      <DependentUpon>QlyNguoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QlySanPham.aspx.cs">
+      <DependentUpon>QlySanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QlySanPham.aspx.designer.cs">
+      <DependentUpon>QlySanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuaSanPham.aspx.cs">
+      <DependentUpon>SuaSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuaSanPham.aspx.designer.cs">
+      <DependentUpon>SuaSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemSanPham.aspx.cs">
+      <DependentUpon>ThemSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemSanPham.aspx.designer.cs">
+      <DependentUpon>ThemSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\XoaSanPham.aspx.cs">
+      <DependentUpon>XoaSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\XoaSanPham.aspx.designer.cs">
+      <DependentUpon>XoaSanPham.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Blog.aspx.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,28 +287,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.min.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.min.js.map" />
+    <Content Include="Admin\Admin.Master" />
     <None Include="packages.config" />
     <Content Include="Header.Master" />
     <None Include="Web.Debug.config">
@@ -286,7 +298,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
+    <Folder Include="Admin\SqlPic\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
