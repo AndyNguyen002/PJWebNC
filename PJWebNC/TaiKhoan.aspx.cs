@@ -1,4 +1,4 @@
-﻿using PJWebNC.Dao;
+﻿ using PJWebNC.Dao;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -18,7 +18,8 @@ namespace PJWebNC
             {
                 Response.Redirect("DangNhap.aspx");
             }
-            //tbFullName.Text = (string)Session["FullName"];
+            tbFullName.Text = (string)Session["FullName"];
+
         }
         
 
@@ -48,7 +49,7 @@ namespace PJWebNC
                     conn.Close();
                 }
                 Session["FullName"] = tbFullName.Text;
-
+            Response.Redirect("QlyTaiKhoan.aspx");
         }
     }
 }

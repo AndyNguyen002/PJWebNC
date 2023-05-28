@@ -41,7 +41,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    Earnings (Annual)
+                                    Số lượng đơn hàng
                                 </div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
                             </div>
@@ -79,7 +79,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                    Pending Requests
+                                    Chờ xác nhận đơn
                                 </div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                             </div>

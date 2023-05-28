@@ -111,5 +111,37 @@ namespace PJWebNC.Dao
                 return objND;
             }
         }
+        public static NguoiDung getOneID(string _id)
+        {
+            NguoiDung objND = null;
+
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+
+            string sql = "Select UserID, TaiKhoan, MatKhau, TenVaiTro, FullName, VaiTro from NguoiDung, VaiTro where UserID = '"+_id+"' and NguoiDung.VaiTro = VaiTro.IDVaiTro";
+
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                SqlCommand sqlCommand = new SqlCommand(sql, conn);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+
+                conn.Open();
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    objND = new NguoiDung();
+                    objND.FullName = Convert.ToString(reader["FullName"]);
+                    objND.TaiKhoan = Convert.ToString(reader["TaiKhoan"]);
+                    objND.MatKhau = Convert.ToString(reader["MatKhau"]);
+                    objND.TenVaiTro = Convert.ToString(reader["MatKhau"]);
+                    objND.VaiTro = Convert.ToInt32(reader["VaiTro"]);
+                    
+                }
+                reader.Close();//Đóng đối tượng DataReader
+                conn.Close();//Đóng kết nối
+                conn.Dispose();//Giải phóng bộ nhớ
+                return objND;
+            }
+        }
     }
 }

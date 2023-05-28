@@ -12,5 +12,6 @@ namespace PJWebNC.Entity
         public string MatKhau { get; set; }
         public int VaiTro { get; set; }
         public string FullName { get; set; }
+        public string TenVaiTro  { get; set; }       
     }
 }

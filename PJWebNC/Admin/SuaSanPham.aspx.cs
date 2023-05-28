@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -23,6 +24,7 @@ namespace PJWebNC.Admin
         }
         protected void BindData(string pID)
         {
+
             string TenTH, GioiTinh, Season;
             SanPham sp = Dao.DaoSanPham.getOne(pID);
             tbTenSP.Text = sp.TenSP;
@@ -37,27 +39,58 @@ namespace PJWebNC.Admin
             Season = sp.Season;
             ThuongHieu.SelectedValue = Season;
 
+
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int pID = Convert.ToInt32(Page.Request.QueryString["id"]);
-            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(strConnection))
+            if (upAnh.HasFile)
             {
-                SqlCommand cmd = new SqlCommand
-                    ("update [SanPham] Set TenSP = @TenSP, MaThuongHieu = @MaThuongHieu, Giaban = @GiaBan, GioiTinh = @GioiTinh, Season = @Season where IDSanPham = @IDSanPham", conn);
-                conn.Open();
-                cmd.Parameters.AddWithValue("@IDSanPham", pID.ToString());
-                cmd.Parameters.AddWithValue("@TenSP", tbTenSP.Text);
-                cmd.Parameters.AddWithValue("@MaThuongHieu", ThuongHieu.SelectedValue);
-                cmd.Parameters.AddWithValue("@GiaBan", tbGiaBan.Text);
-                cmd.Parameters.AddWithValue("@GioiTinh", GioiTinh.SelectedValue);
-                cmd.Parameters.AddWithValue("@Season", Season.SelectedValue);
-                //cmd.Parameters.AddWithValue("@Anh", upAnh.FileName);
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                Response.Redirect("QlySanPham.aspx");
+                string fileName = Path.GetFileName(upAnh.PostedFile.FileName);
+                string filePath = Server.MapPath("SqlPic/" + fileName);
+                upAnh.SaveAs(filePath);
+
+                int pID = Convert.ToInt32(Page.Request.QueryString["id"]);
+                string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+                using (SqlConnection conn = new SqlConnection(strConnection))
+                {
+                    SqlCommand cmd = new SqlCommand
+                        ("update [SanPham] Set TenSP = @TenSP, MaThuongHieu = @MaThuongHieu, Giaban = @GiaBan, GioiTinh = @GioiTinh, Season = @Season, Anh = @Anh where IDSanPham = @IDSanPham", conn);
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@IDSanPham", pID.ToString());
+                    cmd.Parameters.AddWithValue("@TenSP", tbTenSP.Text);
+                    cmd.Parameters.AddWithValue("@MaThuongHieu", ThuongHieu.SelectedValue);
+                    cmd.Parameters.AddWithValue("@GiaBan", tbGiaBan.Text);
+                    cmd.Parameters.AddWithValue("@GioiTinh", GioiTinh.SelectedValue);
+                    cmd.Parameters.AddWithValue("@Season", Season.SelectedValue);
+                    cmd.Parameters.AddWithValue("@Anh", upAnh.FileName);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    Response.Redirect("QlySanPham.aspx");
+                }
             }
+            else
+            {
+                int pID = Convert.ToInt32(Page.Request.QueryString["id"]);
+                string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+                using (SqlConnection conn = new SqlConnection(strConnection))
+                {
+                    SqlCommand cmd = new SqlCommand
+                        ("update [SanPham] Set TenSP = @TenSP, MaThuongHieu = @MaThuongHieu, Giaban = @GiaBan, GioiTinh = @GioiTinh, Season = @Season where IDSanPham = @IDSanPham", conn);
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@IDSanPham", pID.ToString());
+                    cmd.Parameters.AddWithValue("@TenSP", tbTenSP.Text);
+                    cmd.Parameters.AddWithValue("@MaThuongHieu", ThuongHieu.SelectedValue);
+                    cmd.Parameters.AddWithValue("@GiaBan", tbGiaBan.Text);
+                    cmd.Parameters.AddWithValue("@GioiTinh", GioiTinh.SelectedValue);
+                    cmd.Parameters.AddWithValue("@Season", Season.SelectedValue);
+                    
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    Response.Redirect("QlySanPham.aspx");
+                }
+            }
+
+            
         }
     }
 }

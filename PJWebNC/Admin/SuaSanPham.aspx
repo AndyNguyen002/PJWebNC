@@ -47,6 +47,6 @@
         </div>
         <hr class="sidebar-divider">
         <%-- Nút thêm --%>
-        <asp:Button ID="Button1" runat="server" CssClass="btn btn-success btn-icon-split" Text="Thêm" OnClick="Button1_Click" Width="100" />
-
+        <asp:Button ID="Button1" runat="server" CssClass="btn btn-success btn-icon-split" Text="Thay đổi" OnClick="Button1_Click" Width="100" />
+        </div>
 </asp:Content>

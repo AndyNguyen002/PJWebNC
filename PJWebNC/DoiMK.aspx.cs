@@ -65,6 +65,7 @@ namespace PJWebNC
                 }
                 Session["MatKhau"] = tbNewPass.Text;
             }
+            Response.Redirect("DoiMK.aspx");
         }
     }
 }

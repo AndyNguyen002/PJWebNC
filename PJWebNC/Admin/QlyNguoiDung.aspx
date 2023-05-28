@@ -37,12 +37,12 @@
                                             <td><%= item.MatKhau %></td>
                                             <td><%= item.FullName %></td>
                                             <td>
-                                                <a href="Test.aspx?id=<%= item.UserID %>" class="btn btn-success btn-circle">
+                                                <a href="SuaND.aspx?id=<%= item.UserID %>" class="btn btn-success btn-circle">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-danger btn-circle">
+                                                <a href="XoaNguoiDung.aspx?id=<%= item.UserID %>" class="btn btn-danger btn-circle">
                                                     <i class="fas fa-minus"></i>
                                                 </a>
                                             </td>

@@ -52,7 +52,8 @@
             </div>
 
             <div class="buttonChucNang d-flex justify-content-center m-lg-5">
-                <asp:Button ID="bThanhToan" runat="server" Text="MUA NGAY" Height="65" Width="300" BorderWidth="0" ForeColor="White" BackColor="Red" />
+                <a href="../../../../" >asdasd</a>
+                <%--<asp:Button ID="bThanhToan" runat="server" Text="MUA NGAY" Height="65" Width="300" OnClick="bThanhToan_Click" BorderWidth="0" ForeColor="White" BackColor="Red" />--%>
             </div>
         </div>
         <!-- c-right -->

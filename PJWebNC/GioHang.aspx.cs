@@ -84,6 +84,8 @@ namespace PJWebNC
                     List<Entity.GioHang> lst = Dao.DaoGioHang.getAllByUser((int)Session["UserID"]);
                     dtlGioHang.DataSource = lst;
                     DataBind();
+                    Response.Redirect("GioHang.aspx");
+
                 }
             }
             if(e.CommandName == "Update")
@@ -102,7 +104,7 @@ namespace PJWebNC
                     
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                    
+                    Response.Redirect("GioHang.aspx");
                 }
             }
             

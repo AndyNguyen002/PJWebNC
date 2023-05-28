@@ -76,8 +76,10 @@
     <Content Include="Admin\default.aspx" />
     <Content Include="Admin\QlyNguoiDung.aspx" />
     <Content Include="Admin\QlySanPham.aspx" />
+    <Content Include="Admin\SuaND.aspx" />
     <Content Include="Admin\SuaSanPham.aspx" />
     <Content Include="Admin\ThemSanPham.aspx" />
+    <Content Include="Admin\XoaNguoiDung.aspx" />
     <Content Include="Admin\XoaSanPham.aspx" />
     <Content Include="Blog.aspx" />
     <Content Include="Blog.css" />
@@ -124,6 +126,29 @@
     <Content Include="TaiKhoan.aspx" />
     <Content Include="TaiKhoan.css" />
     <Content Include="TrangChu.css" />
+    <Content Include="VNPAY_CS_ASPX\bin\log4net.dll" />
+    <Content Include="VNPAY_CS_ASPX\bin\log4net.xml" />
+    <Content Include="VNPAY_CS_ASPX\bin\VNPAY_CS_ASPX.dll" />
+    <Content Include="VNPAY_CS_ASPX\bin\VNPAY_CS_ASPX.pdb" />
+    <Content Include="VNPAY_CS_ASPX\Default.aspx" />
+    <Content Include="VNPAY_CS_ASPX\Global.asax" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.csproj.FileListAbsolute.txt" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.dll" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.pdb" />
+    <None Include="VNPAY_CS_ASPX\Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="VNPAY_CS_ASPX\Scripts\jquery-1.7.1.js" />
+    <Content Include="VNPAY_CS_ASPX\Scripts\jquery-1.7.1.min.js" />
+    <Content Include="VNPAY_CS_ASPX\Styles\bootstrap.min.css" />
+    <Content Include="VNPAY_CS_ASPX\Styles\js\ie-emulation-modes-warning.js" />
+    <Content Include="VNPAY_CS_ASPX\Styles\js\ie10-viewport-bug-workaround.js" />
+    <Content Include="VNPAY_CS_ASPX\Styles\js\ie8-responsive-file-warning.js" />
+    <Content Include="VNPAY_CS_ASPX\Styles\jumbotron-narrow.css" />
+    <Content Include="VNPAY_CS_ASPX\VNPAY_CS_ASPX.csproj.user" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_ipn.aspx" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_pay.aspx" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_querydr.aspx" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_refund.aspx" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_return.aspx" />
     <Content Include="Web.config" />
     <Content Include="default.aspx" />
     <Content Include="DoiMK.aspx" />
@@ -157,6 +182,13 @@
     <Compile Include="Admin\QlySanPham.aspx.designer.cs">
       <DependentUpon>QlySanPham.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\SuaND.aspx.cs">
+      <DependentUpon>SuaND.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuaND.aspx.designer.cs">
+      <DependentUpon>SuaND.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\SuaSanPham.aspx.cs">
       <DependentUpon>SuaSanPham.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,6 +202,13 @@
     </Compile>
     <Compile Include="Admin\ThemSanPham.aspx.designer.cs">
       <DependentUpon>ThemSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\XoaNguoiDung.aspx.cs">
+      <DependentUpon>XoaNguoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\XoaNguoiDung.aspx.designer.cs">
+      <DependentUpon>XoaNguoiDung.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\XoaSanPham.aspx.cs">
       <DependentUpon>XoaSanPham.aspx</DependentUpon>
@@ -285,11 +324,78 @@
     <Compile Include="DoiMK.aspx.designer.cs">
       <DependentUpon>DoiMK.aspx</DependentUpon>
     </Compile>
+    <Compile Include="VNPAY_CS_ASPX\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\Models\OrderInfo.cs" />
+    <Compile Include="VNPAY_CS_ASPX\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="VNPAY_CS_ASPX\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="VNPAY_CS_ASPX\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="VNPAY_CS_ASPX\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="VNPAY_CS_ASPX\Properties\AssemblyInfo.cs" />
+    <Compile Include="VNPAY_CS_ASPX\VnPayLibrary.cs" />
+    <Compile Include="VNPAY_CS_ASPX\vnpay_ipn.aspx.cs">
+      <DependentUpon>vnpay_ipn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_ipn.aspx.designer.cs">
+      <DependentUpon>vnpay_ipn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_pay.aspx.cs">
+      <DependentUpon>vnpay_pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_pay.aspx.designer.cs">
+      <DependentUpon>vnpay_pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_querydr.aspx.cs">
+      <DependentUpon>vnpay_querydr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_querydr.aspx.designer.cs">
+      <DependentUpon>vnpay_querydr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_refund.aspx.cs">
+      <DependentUpon>vnpay_refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_refund.aspx.designer.cs">
+      <DependentUpon>vnpay_refund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_return.aspx.cs">
+      <DependentUpon>vnpay_return.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_return.aspx.designer.cs">
+      <DependentUpon>vnpay_return.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Admin.Master" />
     <None Include="packages.config" />
     <Content Include="Header.Master" />
+    <Content Include="VNPAY_CS_ASPX\bin\VNPAY_CS_ASPX.dll.config" />
+    <Content Include="VNPAY_CS_ASPX\log4net.config" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.csproj.AssemblyReference.cache" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.csproj.CopyComplete" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.csproj.CoreCompileInputs.cache" />
+    <Content Include="VNPAY_CS_ASPX\VNPAY_CS_ASPX.csproj" />
+    <Content Include="VNPAY_CS_ASPX\Web.config" />
+    <None Include="VNPAY_CS_ASPX\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="VNPAY_CS_ASPX\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -299,6 +405,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\SqlPic\" />
+    <Folder Include="VNPAY_CS_ASPX\App_Data\" />
+    <Folder Include="VNPAY_CS_ASPX\obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
