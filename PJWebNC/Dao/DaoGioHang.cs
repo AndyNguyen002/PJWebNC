@@ -101,5 +101,75 @@ namespace PJWebNC.Dao
                 return objND;
             }
         }
+
+
+        public static List<Entity.GioHang> getAll()
+        {
+            List<Entity.GioHang> lstGioHang = new List<Entity.GioHang>();
+            //Lấy thông tin chuỗi kết nối từ Web.config
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+            //Viết câu lệnh truy vấn
+            string strSQL = "SELECT IDGioHang, UserID, IDSanPham, SoLuong from GioHang";
+            //Định nghĩa đối tượng Connection
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                //Khởi tạo đối tượng Command
+                SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                //Mở kết nối tới CSDL
+                sqlConnection.Open();
+                //Sử dụng đối tượng DataReader để đọc dữ liệu
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                Entity.GioHang objGioHang = null;
+                while (sqlDataReader.Read())
+                {
+                    objGioHang = new Entity.GioHang();
+                    objGioHang.IDGioHang = Convert.ToInt32(sqlDataReader["IDGioHang"]);
+                    objGioHang.UserID = Convert.ToInt32(sqlDataReader["UserID"]);
+                    objGioHang.IDSanPham = Convert.ToInt32(sqlDataReader["IDSanPham"]);
+                    objGioHang.SoLuong = Convert.ToInt32(sqlDataReader["SoLuong"]);
+                    lstGioHang.Add(objGioHang);
+                }
+                sqlDataReader.Close();//Đóng đối tượng DataReader
+                sqlConnection.Close();//Đóng kết nối
+                sqlConnection.Dispose();//Giải phóng bộ nhớ
+                return lstGioHang;
+
+            }
+        }
+
+        public static Entity.GioHang getOneID(string _id)
+        {
+            Entity.GioHang objGioHang = null;
+
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+
+            string sql = "Select IDGioHang, UserID, IDSanPham, SoLuong from GioHang where IDGioHang = '" + _id + "' ";
+
+            using (SqlConnection conn = new SqlConnection(strConnection))
+            {
+                SqlCommand sqlCommand = new SqlCommand(sql, conn);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+
+                conn.Open();
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    objGioHang = new Entity.GioHang();
+                    objGioHang.IDGioHang = Convert.ToInt32(reader["IDGioHang"]);
+                    objGioHang.UserID = Convert.ToInt32(reader["UserID"]);
+                    objGioHang.IDSanPham = Convert.ToInt32(reader["IDSanPham"]);
+                    objGioHang.SoLuong = Convert.ToInt32(reader["SoLuong"]);
+
+                }
+                reader.Close();//Đóng đối tượng DataReader
+                conn.Close();//Đóng kết nối
+                conn.Dispose();//Giải phóng bộ nhớ
+                return objGioHang;
+            }
+        }
+
+
     }
 }

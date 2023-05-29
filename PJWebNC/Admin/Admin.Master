@@ -67,6 +67,13 @@
                             <h6 class="collapse-header">Chọn chức năng quản lý:</h6>
                             <a class="collapse-item" href="QlyNguoiDung.aspx">Tài khoản</a>
                             <a class="collapse-item" href="QlySanPham.aspx">Sản phẩm</a>
+
+                            <a class="collapse-item" href="QlyThuongHieu.aspx">Thương hiệu</a>
+                            <a class="collapse-item" href="QlyHuong.aspx">Hương</a>
+                            <a class="collapse-item" href="QlyDacDiem.aspx">Đặc điểm</a>
+                            <a class="collapse-item" href="QlyGioHang.aspx">Giỏ hàng</a>
+
+
                         </div>
                     </div>
                 </li>
