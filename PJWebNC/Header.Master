@@ -7,8 +7,17 @@
     
     <asp:ContentPlaceHolder ID="tieude" runat="server"></asp:ContentPlaceHolder>
     <link href="Header.css" rel="stylesheet" />
+    <title></title>
     <link href="Footer.css" rel="stylesheet" />
     <link rel="icon" href="Icon/perfume.png"  />
+    <style>
+        .active1 {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+    
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -39,13 +48,19 @@
 
 
                 <!-- ChucNang -->
-                <%-- <div class="ChucNang p-0" >
-                <ul style="display: flex;flex-direction: row; margin: 0px;" class="p-0">
-                    <a href="#"><li class="itemChucNang p-0"><img src="../Icon/search.png" alt=""></li></a>   
-                    <a href="#"><li class="itemChucNang p-0"><img src="../Icon/User.png" alt=""></li></a>
-                    <a href="#"><li class="itemChucNang p-0"><img src="../Icon/cart.png" alt=""></li></a>
-                </ul>
-            </div>--%>
+                <div class="ChucNang p-0 ">
+                    <ul style="display: flex; flex-direction: row; margin: 0px;" class="p-0">
+                        <a href="QLyTaiKhoan.aspx">
+                            <li class="itemChucNang p-0">
+                                <img src="../Icon/User.png" alt=""></li>
+                        </a>
+
+                        <a href="GioHang.aspx?id=<%Response.Write(Session["UserID"]); %>">
+                            <li class="itemChucNang p-0">
+                                <img src="../Icon/cart.png" alt=""></li>
+                        </a>
+                    </ul>
+                </div>
                 <!-- end ChucNang -->
             </div>
                 <!-- end header -->
@@ -178,7 +193,28 @@
                     </div>
                 </div>
                 <!-- End footer -->
-            
+            <script>
+                // Lấy đường dẫn của trang hiện tại
+                var path = window.location.pathname;
+
+                // Lặp qua tất cả các thẻ li trong danh sách menu
+                var menuItems = document.querySelectorAll('.itemDanhMuc');
+                for (var i = 0; i < menuItems.length; i++) {
+                    var menuItem = menuItems[i];
+
+                    // Lấy href của thẻ a bên trong thẻ li
+                    var href = menuItem.querySelector('a').getAttribute('href');
+
+                    // So sánh href với đường dẫn của trang hiện tại
+                    if (href === path) {
+                        // Nếu trùng, thêm lớp CSS active vào thẻ li
+                        menuItem.classList.add('active1');
+                    } else {
+                        // Nếu khác, loại bỏ lớp CSS active khỏi thẻ li (nếu có)
+                        menuItem.classList.remove('active1');
+                    }
+                }
+            </script>
         </div>
     </form>
 </body>

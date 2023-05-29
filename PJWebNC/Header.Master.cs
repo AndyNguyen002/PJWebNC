@@ -11,7 +11,14 @@ namespace PJWebNC
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["FullName"] != null)
+            {
+                Page.Title = "Xin chào " + Session["FullName"].ToString();
+            }
+            else
+            {
+                Page.Title = "Trang chủ";
+            }
         }
     }
 }

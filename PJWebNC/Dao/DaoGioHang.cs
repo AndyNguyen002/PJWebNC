@@ -102,6 +102,7 @@ namespace PJWebNC.Dao
             }
         }
 
+
         public static List<Entity.GioHang> getAll()
         {
             List<Entity.GioHang> lstGioHang = new List<Entity.GioHang>();
@@ -168,6 +169,7 @@ namespace PJWebNC.Dao
                 return objGioHang;
             }
         }
+
 
     }
 }

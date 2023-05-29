@@ -12,9 +12,10 @@
                         <div class="imgTop">
                             <asp:Image runat="server" ID="image1" Width="400px" Height="400px" />
                         </div>
-                        <div class="imgBot">
-    
-                        </div>
+                        <%--<div class="imgBot">
+                            <asp:Image runat="server" ID="image2" Width="100px" Height="100px"  />
+                            
+                        </div>--%>
                     </div>
                     <h3 style="font-size: 33px; margin: 20px 0px;">MÔ TẢ</h3>
                     <p style="font-size: 18px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas adipisci quasi facere repellat quod nesciunt, perferendis, minus laudantium repudiandae soluta facilis blanditiis eius itaque corrupti, in debitis vero perspiciatis illum.</p>
@@ -29,8 +30,8 @@
                     
                     <div class="chucnang">
                        
-                        <asp:TextBox ID="Soluong" Width="170" runat="server"></asp:TextBox> 
-                        <asp:Button ID="ThemCart" Width="420" runat="server" BackColor="black" ForeColor="white" Text="THÊM VÀO GIỎ HÀNG" />
+                        <asp:TextBox ID="Soluong" Width="170" TextMode="Number" Text="1" min="1" runat="server"></asp:TextBox> 
+                        <asp:Button ID="ThemCart" Width="420" runat="server" BackColor="black" ForeColor="white" Text="THÊM VÀO GIỎ HÀNG" OnClick="ThemCart_Click" BorderWidth="0"/>
                     </div>
     
                     <div class="panel">
@@ -72,7 +73,7 @@
                                                 <asp:Label ID="PhatHanh" runat="server" Text="Chưa có dữ liệu"></asp:Label>
                                             </li>
                                             <li class="fs-5">Giới tính: 
-                                                <asp:Label ID="gioitinh1" runat="server" Text="Chưa có dữ liệu"></asp:Label> 
+                                                <asp:Label ID="gioitinh1" runat="server" Text="Chưa có dữ liệu"></asp:Label>
                                             </li>
                                             <li class="fs-5">Độ tuổi: 
                                                 <asp:Label ID="DoTuoi" runat="server" Text="Chưa có dữ liệu"></asp:Label>
@@ -85,14 +86,14 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                <div class="toneHuong">
-                                        <ul>
-                                            <li class="fs-5">Phát hành: </li>
-                                            <li class="fs-5">Giới tính: </li>
-                                            <li class="fs-5">Độ tuổi: </li>
-                                            <li class="fs-5">Độ lưu mùi: </li>
-                                        </ul>
-                                    </div>
+                                <div class="toneHuong" style="display:flex; flex-direction: row">
+                                    <%--<p class="fs-5" style="margin-left:20px">Mùa:</p> --%>
+                                    <ul class="" >
+                                        <li class="fs-5">Ngày: /10</li>
+                                        <li class="fs-5">Đêm: /10</li>
+                                        
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -111,9 +112,9 @@
                                     </div>
                                     <p class="HangSX"><%#Eval("TenThuongHieu") %></p>
 
-                                    <p><%#Eval("TenSP") %></p>
+                                    <p style="text-align:center;"><%#Eval("TenSP") %></p>
 
-                                    <h4><%#Eval("GiaBan") %></h4>
+                                    <h4><%#Eval("GiaBan", "{0:N0} VND") %></h4>
                                 </div>
                             </a>
                         </ItemTemplate>
@@ -133,9 +134,9 @@
                                     </div>
                                     <p class="HangSX"><%#Eval("TenThuongHieu") %></p>
 
-                                    <p><%#Eval("TenSP") %></p>
+                                    <p style="text-align:center;"><%#Eval("TenSP") %></p>
 
-                                    <h4><%#Eval("GiaBan") %></h4>
+                                    <h4><%#Eval("GiaBan", "{0:N0} VND") %></h4>
                                 </div>
                             </a>
                         </ItemTemplate>

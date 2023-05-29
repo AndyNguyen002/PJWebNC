@@ -71,13 +71,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
+
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-=======
+
     <Content Include="Admin\default.aspx" />
     <Content Include="Admin\QlyDacDiem.aspx" />
     <Content Include="Admin\QlyGioHang.aspx" />
@@ -135,36 +135,29 @@
     <Content Include="Admin\XoaNguoiDung.aspx" />
     <Content Include="Admin\XoaSanPham.aspx" />
     <Content Include="Admin\XoaThuongHieu.aspx" />
->>>>>>> Stashed changes
+
+
+    <Content Include="Admin\default.aspx" />
+    <Content Include="Admin\QlyNguoiDung.aspx" />
+    <Content Include="Admin\QlySanPham.aspx" />
+    <Content Include="Admin\SuaND.aspx" />
+    <Content Include="Admin\SuaSanPham.aspx" />
+    <Content Include="Admin\ThemSanPham.aspx" />
+    <Content Include="Admin\XoaNguoiDung.aspx" />
+    <Content Include="Admin\XoaSanPham.aspx" />
+
     <Content Include="Blog.aspx" />
     <Content Include="Blog.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.css" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.min.css" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.min.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.js" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.min.js" />
     <Content Include="ChiTietSanPham.aspx" />
     <Content Include="ChiTietSanPham.css" />
+    <Content Include="DangNhap.aspx" />
+    <Content Include="DangNhap.css" />
     <Content Include="DanhSach.aspx" />
     <Content Include="DanhSach.css" />
+    <Content Include="DonHang.css" />
     <Content Include="Footer.css" />
+    <Content Include="GioHang.aspx" />
+    <Content Include="GioHang.css" />
     <Content Include="GioiThieu.aspx" />
     <Content Include="GioiThieu.css" />
     <Content Include="Header.css" />
@@ -191,13 +184,42 @@
     <Content Include="img\XXIV-8-6-cfd0fee5.jpg" />
     <Content Include="img\XXIV-Review-Black-Afgano-ee21f154.jpg" />
     <Content Include="img\XXiV-Review-Light-Blue-Forever-ab5d164f.jpg" />
+    <Content Include="QLyDiaChi.aspx" />
+    <Content Include="QLyDonHang.aspx" />
+    <Content Include="QLyTaiKhoan.aspx" />
+    <Content Include="SignOut.aspx" />
+    <Content Include="TaiKhoan.aspx" />
+    <Content Include="TaiKhoan.css" />
     <Content Include="TrangChu.css" />
+    <Content Include="VNPAY_CS_ASPX\bin\log4net.dll" />
+    <Content Include="VNPAY_CS_ASPX\bin\log4net.xml" />
+    <Content Include="VNPAY_CS_ASPX\bin\VNPAY_CS_ASPX.dll" />
+    <Content Include="VNPAY_CS_ASPX\bin\VNPAY_CS_ASPX.pdb" />
+    <Content Include="VNPAY_CS_ASPX\Default.aspx" />
+    <Content Include="VNPAY_CS_ASPX\Global.asax" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.csproj.FileListAbsolute.txt" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.dll" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.pdb" />
+    <None Include="VNPAY_CS_ASPX\Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="VNPAY_CS_ASPX\Scripts\jquery-1.7.1.js" />
+    <Content Include="VNPAY_CS_ASPX\Scripts\jquery-1.7.1.min.js" />
+    <Content Include="VNPAY_CS_ASPX\Styles\bootstrap.min.css" />
+    <Content Include="VNPAY_CS_ASPX\Styles\js\ie-emulation-modes-warning.js" />
+    <Content Include="VNPAY_CS_ASPX\Styles\js\ie10-viewport-bug-workaround.js" />
+    <Content Include="VNPAY_CS_ASPX\Styles\js\ie8-responsive-file-warning.js" />
+    <Content Include="VNPAY_CS_ASPX\Styles\jumbotron-narrow.css" />
+    <Content Include="VNPAY_CS_ASPX\VNPAY_CS_ASPX.csproj.user" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_ipn.aspx" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_pay.aspx" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_querydr.aspx" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_refund.aspx" />
+    <Content Include="VNPAY_CS_ASPX\vnpay_return.aspx" />
     <Content Include="Web.config" />
     <Content Include="default.aspx" />
+    <Content Include="DoiMK.aspx" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
-=======
+
     <Compile Include="Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -212,6 +234,7 @@
     <Compile Include="Admin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Admin\QlyDacDiem.aspx.cs">
       <DependentUpon>QlyDacDiem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -233,6 +256,7 @@
     <Compile Include="Admin\QlyHuong.aspx.designer.cs">
       <DependentUpon>QlyHuong.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Admin\QlyNguoiDung.aspx.cs">
       <DependentUpon>QlyNguoiDung.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -247,6 +271,7 @@
     <Compile Include="Admin\QlySanPham.aspx.designer.cs">
       <DependentUpon>QlySanPham.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Admin\QlyThuongHieu.aspx.cs">
       <DependentUpon>QlyThuongHieu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,7 +299,6 @@
     </Compile>
     <Compile Include="Admin\SuaHuong.aspx.designer.cs">
       <DependentUpon>SuaHuong.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\SuaND.aspx.cs">
       <DependentUpon>SuaND.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -289,6 +313,7 @@
     <Compile Include="Admin\SuaSanPham.aspx.designer.cs">
       <DependentUpon>SuaSanPham.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Admin\SuaTH.aspx.cs">
       <DependentUpon>SuaTH.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -310,6 +335,7 @@
     <Compile Include="Admin\ThemHuong.aspx.designer.cs">
       <DependentUpon>ThemHuong.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Admin\ThemSanPham.aspx.cs">
       <DependentUpon>ThemSanPham.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -317,6 +343,7 @@
     <Compile Include="Admin\ThemSanPham.aspx.designer.cs">
       <DependentUpon>ThemSanPham.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Admin\ThemThuongHieu.aspx.cs">
       <DependentUpon>ThemThuongHieu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -345,6 +372,7 @@
     <Compile Include="Admin\XoaHuong.aspx.designer.cs">
       <DependentUpon>XoaHuong.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Admin\XoaNguoiDung.aspx.cs">
       <DependentUpon>XoaNguoiDung.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -359,6 +387,7 @@
     <Compile Include="Admin\XoaSanPham.aspx.designer.cs">
       <DependentUpon>XoaSanPham.aspx</DependentUpon>
     </Compile>
+
     <Compile Include="Admin\XoaThuongHieu.aspx.cs">
       <DependentUpon>XoaThuongHieu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -366,7 +395,7 @@
     <Compile Include="Admin\XoaThuongHieu.aspx.designer.cs">
       <DependentUpon>XoaThuongHieu.aspx</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
+
     <Compile Include="Blog.aspx.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -381,6 +410,13 @@
     <Compile Include="ChiTietSanPham.aspx.designer.cs">
       <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DangNhap.aspx.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangNhap.aspx.designer.cs">
+      <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DanhSach.aspx.cs">
       <DependentUpon>DanhSach.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -388,11 +424,15 @@
     <Compile Include="DanhSach.aspx.designer.cs">
       <DependentUpon>DanhSach.aspx</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
+    <Compile Include="Dao\DaoGioHang.cs" />
+
     <Compile Include="Dao\DaoHangSX.cs" />
+    <Compile Include="Dao\DaoNguoiDung.cs" />
     <Compile Include="Dao\DaoSanPham.cs" />
+    <Compile Include="Entity\GioHang.cs" />
     <Compile Include="Entity\HangSX.cs" />
-=======
+
+
     <Compile Include="Dao\DaoDacDiem.cs" />
     <Compile Include="Dao\DaoGioHang.cs" />
     <Compile Include="Dao\DaoHangSX.cs" />
@@ -404,8 +444,17 @@
     <Compile Include="Entity\HangSX.cs" />
     <Compile Include="Entity\Huong.cs" />
     <Compile Include="Entity\NguoiDung.cs" />
->>>>>>> Stashed changes
+
+    <Compile Include="Entity\NguoiDung.cs" />
+
     <Compile Include="Entity\SanPham.cs" />
+    <Compile Include="GioHang.aspx.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GioHang.aspx.designer.cs">
+      <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GioiThieu.aspx.cs">
       <DependentUpon>GioiThieu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -421,12 +470,33 @@
     <Compile Include="Header.Master.designer.cs">
       <DependentUpon>Header.Master</DependentUpon>
     </Compile>
-    <Compile Include="Site2.Master.cs">
-      <DependentUpon>Site2.Master</DependentUpon>
+    <Compile Include="QLyDiaChi.aspx.cs">
+      <DependentUpon>QLyDiaChi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site2.Master.designer.cs">
-      <DependentUpon>Site2.Master</DependentUpon>
+    <Compile Include="QLyDiaChi.aspx.designer.cs">
+      <DependentUpon>QLyDiaChi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QLyDonHang.aspx.cs">
+      <DependentUpon>QLyDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QLyDonHang.aspx.designer.cs">
+      <DependentUpon>QLyDonHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QLyTaiKhoan.aspx.cs">
+      <DependentUpon>QLyTaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QLyTaiKhoan.aspx.designer.cs">
+      <DependentUpon>QLyTaiKhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOut.aspx.designer.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -435,8 +505,7 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
-=======
+
     <Compile Include="TaiKhoan.aspx.cs">
       <DependentUpon>TaiKhoan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -451,37 +520,85 @@
     <Compile Include="DoiMK.aspx.designer.cs">
       <DependentUpon>DoiMK.aspx</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
+    <Compile Include="VNPAY_CS_ASPX\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\Models\OrderInfo.cs" />
+    <Compile Include="VNPAY_CS_ASPX\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="VNPAY_CS_ASPX\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="VNPAY_CS_ASPX\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="VNPAY_CS_ASPX\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="VNPAY_CS_ASPX\Properties\AssemblyInfo.cs" />
+    <Compile Include="VNPAY_CS_ASPX\VnPayLibrary.cs" />
+    <Compile Include="VNPAY_CS_ASPX\vnpay_ipn.aspx.cs">
+      <DependentUpon>vnpay_ipn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_ipn.aspx.designer.cs">
+      <DependentUpon>vnpay_ipn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_pay.aspx.cs">
+      <DependentUpon>vnpay_pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_pay.aspx.designer.cs">
+      <DependentUpon>vnpay_pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_querydr.aspx.cs">
+      <DependentUpon>vnpay_querydr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_querydr.aspx.designer.cs">
+      <DependentUpon>vnpay_querydr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_refund.aspx.cs">
+      <DependentUpon>vnpay_refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_refund.aspx.designer.cs">
+      <DependentUpon>vnpay_refund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_return.aspx.cs">
+      <DependentUpon>vnpay_return.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VNPAY_CS_ASPX\vnpay_return.aspx.designer.cs">
+      <DependentUpon>vnpay_return.aspx</DependentUpon>
+    </Compile>
+
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.rtl.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-reboot.rtl.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap-utilities.rtl.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\css\bootstrap.rtl.min.css.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.esm.min.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.js.map" />
-    <Content Include="bootstrap-5.0.2-dist\js\bootstrap.min.js.map" />
+    <Content Include="Admin\Admin.Master" />
     <None Include="packages.config" />
     <Content Include="Header.Master" />
-<<<<<<< Updated upstream
+
     <Content Include="Site2.Master" />
-=======
->>>>>>> Stashed changes
+
+
+
+    <Content Include="VNPAY_CS_ASPX\bin\VNPAY_CS_ASPX.dll.config" />
+    <Content Include="VNPAY_CS_ASPX\log4net.config" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.csproj.AssemblyReference.cache" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.csproj.CopyComplete" />
+    <Content Include="VNPAY_CS_ASPX\obj\Debug\VNPAY_CS_ASPX.csproj.CoreCompileInputs.cache" />
+    <Content Include="VNPAY_CS_ASPX\VNPAY_CS_ASPX.csproj" />
+    <Content Include="VNPAY_CS_ASPX\Web.config" />
+    <None Include="VNPAY_CS_ASPX\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="VNPAY_CS_ASPX\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -489,10 +606,14 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-<<<<<<< Updated upstream
-=======
-  <ItemGroup />
->>>>>>> Stashed changes
+
+
+  <ItemGroup>
+    <Folder Include="Admin\SqlPic\" />
+    <Folder Include="VNPAY_CS_ASPX\App_Data\" />
+    <Folder Include="VNPAY_CS_ASPX\obj\Debug\TempPE\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

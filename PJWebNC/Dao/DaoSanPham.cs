@@ -11,6 +11,43 @@ namespace PJWebNC.Dao
 {
     public class DaoSanPham
     {
+        public static List<SanPham> getAllToGrid()
+        {
+            List<SanPham> lstSP = new List<SanPham>();
+            //Lấy thông tin chuỗi kết nối từ Web.config
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+            //Viết câu lệnh truy vấn
+            string strSQL = "select IDSanPham, TenSP, TenThuongHieu, GiaBan, GioiTinh.GioiTinh, Season.Season, Anh from SanPham, GioiTinh, ThuongHieu, Season where SanPham.GioiTinh = GioiTinh.MaGioiTinh and SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and SanPham.GioiTinh = GioiTinh.MaGioiTinh and SanPham.Season = Season.MaSeason";
+            //Định nghĩa đối tượng Connection
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                //Khởi tạo đối tượng Command
+                SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                //Mở kết nối tới CSDL
+                sqlConnection.Open();
+                //Sử dụng đối tượng DataReader để đọc dữ liệu
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                SanPham objSP = null;
+                while (sqlDataReader.Read())
+                {
+                    objSP = new SanPham();
+                    objSP.IDSanPham = Convert.ToInt32(sqlDataReader["IDSanPham"]);
+                    objSP.TenSP = Convert.ToString(sqlDataReader["TenSP"]);
+                    objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
+                    objSP.GioiTinh = Convert.ToString(sqlDataReader["GioiTinh"]);
+                    objSP.Season = Convert.ToString(sqlDataReader["Season"]);
+                    objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
+                    objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
+                    lstSP.Add(objSP);
+                }
+                sqlDataReader.Close();//Đóng đối tượng DataReader
+                sqlConnection.Close();//Đóng kết nối
+                sqlConnection.Dispose();//Giải phóng bộ nhớ
+                return lstSP;
+
+            }
+        }
         public static List<SanPham> getAllbyHangSX(string _mahsx)
         {
             List<SanPham> lstSP = new List<SanPham>();
@@ -122,7 +159,7 @@ namespace PJWebNC.Dao
             //Lấy thông tin chuỗi kết nối từ Web.config
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
             //Viết câu lệnh truy vấn
-            string strSQL = "SELECT TenThuongHieu, TenSP, Anh, GiaBan FROM SanPham, ThuongHieu where SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and TenSP = '" + _name + "'";
+            string strSQL = "SELECT TenThuongHieu, TenSP, Anh, GiaBan, SanPham.Season FROM SanPham, ThuongHieu, Season where SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and SanPham.Season = Season.MaSeason and  TenSP = '" + _name + "'";
             //Định nghĩa đối tượng Connection
             using (SqlConnection sqlConnection = new SqlConnection(strConnection))
             {
@@ -142,7 +179,8 @@ namespace PJWebNC.Dao
                     objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
                     objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
                     objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
-                    
+                    objSP.Season = Convert.ToString(sqlDataReader["Season"]);
+
                 }
                 sqlDataReader.Close();//Đóng đối tượng DataReader
                 sqlConnection.Close();//Đóng kết nối
@@ -158,7 +196,7 @@ namespace PJWebNC.Dao
 
             string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
 
-            string sql = "SELECT GioiTinh.GioiTinh, TenThuongHieu, TenSP, Anh, GiaBan FROM SanPham, ThuongHieu, GioiTinh where GioiTinh.MaGioiTinh = SanPham.GioiTinh and SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and IDSanPham = '"+_id+"'";
+            string sql = "SELECT GioiTinh.GioiTinh, TenThuongHieu, TenSP, Anh, GiaBan, SanPham.Season FROM SanPham, ThuongHieu, GioiTinh, Season where GioiTinh.MaGioiTinh = SanPham.GioiTinh and SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and SanPham.Season = Season.MaSeason and IDSanPham = '" + _id+"'";
 
             using (SqlConnection conn = new SqlConnection(strConnection))
             {
@@ -176,6 +214,8 @@ namespace PJWebNC.Dao
                     objND.TenThuongHieu = Convert.ToString(reader["TenThuongHieu"]);
                     objND.Anh = Convert.ToString(reader["Anh"]);
                     objND.GiaBan = Convert.ToInt32(reader["GiaBan"]);
+                    objND.Season = Convert.ToString(reader["Season"]);
+
                 }
                 reader.Close();//Đóng đối tượng DataReader
                 conn.Close();//Đóng kết nối
@@ -420,5 +460,153 @@ namespace PJWebNC.Dao
 
             }
         }
+        public static List<SanPham> getSPGioiTinh(int _magioitinh)
+        {
+            List<SanPham> lstSP = new List<SanPham>();
+            //Lấy thông tin chuỗi kết nối từ Web.config
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+            //Viết câu lệnh truy vấn
+            string strSQL = "select Anh, IDSanPham, TenSP, GiaBan, TenThuongHieu, GioiTinh.GioiTinh from ThuongHieu, GioiTinh, SanPham  where GioiTinh.MaGioiTinh = SanPham.GioiTinh and ThuongHieu.MaThuongHieu = SanPham.MaThuongHieu and GioiTinh.MaGioiTinh = '"+ _magioitinh + "' ";
+            //Định nghĩa đối tượng Connection
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                //Khởi tạo đối tượng Command
+                SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                //Mở kết nối tới CSDL
+                sqlConnection.Open();
+                //Sử dụng đối tượng DataReader để đọc dữ liệu
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                SanPham objSP = null;
+                while (sqlDataReader.Read())
+                {
+                    objSP = new SanPham();
+                    objSP.IDSanPham = Convert.ToInt32(sqlDataReader["IDSanPham"]);
+                    objSP.TenSP = Convert.ToString(sqlDataReader["TenSP"]);
+                    objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
+                    objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
+                    objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
+                    lstSP.Add(objSP);
+                }
+                sqlDataReader.Close();//Đóng đối tượng DataReader
+                sqlConnection.Close();//Đóng kết nối
+                sqlConnection.Dispose();//Giải phóng bộ nhớ
+                return lstSP;
+
+            }
+        }
+        public static List<SanPham> getSPSeason(int _tenss)
+        {
+            List<SanPham> lstSP = new List<SanPham>();
+            //Lấy thông tin chuỗi kết nối từ Web.config
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+            //Viết câu lệnh truy vấn
+            string strSQL = "select Anh, IDSanPham, TenSP, GiaBan, TenThuongHieu, Season.Season from ThuongHieu, Season, SanPham  where Season.MaSeason = SanPham.Season and ThuongHieu.MaThuongHieu = SanPham.MaThuongHieu and Season.MaSeason = '" + _tenss + "' ";
+            //Định nghĩa đối tượng Connection
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                //Khởi tạo đối tượng Command
+                SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                //Mở kết nối tới CSDL
+                sqlConnection.Open();
+                //Sử dụng đối tượng DataReader để đọc dữ liệu
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                SanPham objSP = null;
+                while (sqlDataReader.Read())
+                {
+                    objSP = new SanPham();
+                    objSP.IDSanPham = Convert.ToInt32(sqlDataReader["IDSanPham"]);
+                    objSP.TenSP = Convert.ToString(sqlDataReader["TenSP"]);
+                    objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
+                    objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
+                    objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
+                    lstSP.Add(objSP);
+                }
+                sqlDataReader.Close();//Đóng đối tượng DataReader
+                sqlConnection.Close();//Đóng kết nối
+                sqlConnection.Dispose();//Giải phóng bộ nhớ
+                return lstSP;
+
+            }
+        }
+        public static List<SanPham> getSPprice(int _gia1, int _gia2)
+        {
+            List<SanPham> lstSP = new List<SanPham>();
+            //Lấy thông tin chuỗi kết nối từ Web.config
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+            //Viết câu lệnh truy vấn
+            string strSQL = "select Anh, IDSanPham, TenSP, GiaBan, TenThuongHieu, Season.Season from ThuongHieu, Season, SanPham  where Season.MaSeason = SanPham.Season and ThuongHieu.MaThuongHieu = SanPham.MaThuongHieu and GiaBan > '"+_gia1+"' and GiaBan < '"+_gia2+"' ";
+            //Định nghĩa đối tượng nnection
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                //Khởi tạo đối tượng Command
+                SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                //Mở kết nối tới CSDL
+                sqlConnection.Open();
+                //Sử dụng đối tượng DataReader để đọc dữ liệu
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                SanPham objSP = null;
+                while (sqlDataReader.Read())
+                {
+                    objSP = new SanPham();
+                    objSP.IDSanPham = Convert.ToInt32(sqlDataReader["IDSanPham"]);
+                    objSP.TenSP = Convert.ToString(sqlDataReader["TenSP"]);
+                    objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
+                    objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
+                    objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
+                    lstSP.Add(objSP);
+                }
+                sqlDataReader.Close();//Đóng đối tượng DataReader
+                sqlConnection.Close();//Đóng kết nối
+                sqlConnection.Dispose();//Giải phóng bộ nhớ
+                return lstSP;
+
+            }
+        }
+
+        public static List<SanPham> getAllFilter(
+            string sqlgioitinh="", 
+            string sqlgia1="", 
+            string sqlgia2="",
+            string sqlseason=""
+
+            )
+        {
+            List<SanPham> lstSP = new List<SanPham>();
+            //Lấy thông tin chuỗi kết nối từ Web.config
+            string strConnection = ConfigurationManager.ConnectionStrings["ConnDB"].ConnectionString;
+            //Viết câu lệnh truy vấn
+            string strSQL = "select Anh, IDSanPham, TenSP, GiaBan, TenThuongHieu, Season.Season from SanPham, ThuongHieu, Season, GioiTinh where GioiTinh.MaGioiTinh = SanPham.GioiTinh and SanPham.MaThuongHieu = ThuongHieu.MaThuongHieu and Season.MaSeason = SanPham.Season "+" " + sqlgioitinh + " " + sqlseason + " " + sqlgia1 + " "+ sqlgia2;
+            //Định nghĩa đối tượng nnection
+            using (SqlConnection sqlConnection = new SqlConnection(strConnection))
+            {
+                //Khởi tạo đối tượng Command
+                SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                //Mở kết nối tới CSDL
+                sqlConnection.Open();
+                //Sử dụng đối tượng DataReader để đọc dữ liệu
+                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                SanPham objSP = null;
+                while (sqlDataReader.Read())
+                {
+                    objSP = new SanPham();
+                    objSP.IDSanPham = Convert.ToInt32(sqlDataReader["IDSanPham"]);
+                    objSP.TenSP = Convert.ToString(sqlDataReader["TenSP"]);
+                    objSP.TenThuongHieu = Convert.ToString(sqlDataReader["TenThuongHieu"]);
+                    objSP.Anh = Convert.ToString(sqlDataReader["Anh"]);
+                    objSP.GiaBan = Convert.ToInt32(sqlDataReader["GiaBan"]);
+                    lstSP.Add(objSP);
+                }
+                sqlDataReader.Close();//Đóng đối tượng DataReader
+                sqlConnection.Close();//Đóng kết nối
+                sqlConnection.Dispose();//Giải phóng bộ nhớ
+                return lstSP;
+
+            }
+        }
+
     }
 }
