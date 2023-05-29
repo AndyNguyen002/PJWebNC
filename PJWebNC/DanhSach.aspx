@@ -27,6 +27,7 @@
                 </div>
                 <div class="c-right">
                     
+<<<<<<< Updated upstream
                     <asp:DataList ID="dtlDanhSachSanPham" RepeatColumns="5" RepeatDirection="Horizontal" runat="server"   >
                         <ItemTemplate>
                             <a href="ChiTietSanPham.aspx?id=<%# Eval("IDSanPham") %>">
@@ -47,6 +48,32 @@
       
                     
                 </div>
+=======
+                        <div class="c-right">
+
+                            <asp:DataList ID="dtlDanhSachSanPham" RepeatColumns="5" RepeatDirection="Horizontal" runat="server">
+                                <ItemTemplate>
+                                    <a href="ChiTietSanPham.aspx?id=<%# Eval("IDSanPham") %>">
+                                        <div class="itemProduct1">
+                                            <div class="picProduct1">
+                                                <asp:Image ID="Image1" runat="server" Width="100%" Height="100%" ImageUrl='<%# "Admin/SqlPic/" + Eval("Anh") %>' />
+                                            </div>
+                                            <h3 class="HangSX1"><%# Eval("TenThuongHieu") %>
+                                            </h3>
+                                            <h3 class="nameProduct1" style="text-align: center;"><%# Eval("TenSP") %>
+                                            </h3>
+                                            <h3 class="nameProduct1"><%# Eval("GiaBan", "{0:N0} VND") %>
+                                            </h3>
+                                        </div>
+                                    </a>
+                                </ItemTemplate>
+                            </asp:DataList>
+
+
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+>>>>>>> Stashed changes
             </div>
         </div>
         <!-- Content -->

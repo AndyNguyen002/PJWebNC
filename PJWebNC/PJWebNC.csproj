@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Configuration.ConfigurationBuilders.Base, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Configuration.ConfigurationBuilders.Base.2.0.0\lib\Net471\Microsoft.Configuration.ConfigurationBuilders.Base.dll</HintPath>
     </Reference>
@@ -68,11 +71,71 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+=======
+    <Content Include="Admin\default.aspx" />
+    <Content Include="Admin\QlyDacDiem.aspx" />
+    <Content Include="Admin\QlyGioHang.aspx" />
+    <Content Include="Admin\QlyHuong.aspx" />
+    <Content Include="Admin\QlyNguoiDung.aspx" />
+    <Content Include="Admin\QlySanPham.aspx" />
+    <Content Include="Admin\QlyThuongHieu.aspx" />
+    <Content Include="Admin\SqlPic\Adele-600x600.png" />
+    <Content Include="Admin\SqlPic\Amber-and-Fig-600x600.png" />
+    <Content Include="Admin\SqlPic\Amber-Rosewood-600x600.png" />
+    <Content Include="Admin\SqlPic\Amouge-Meander.png" />
+    <Content Include="Admin\SqlPic\Clive-Christian-Timeless-600x600.png" />
+    <Content Include="Admin\SqlPic\Delina-600x600.png" />
+    <Content Include="Admin\SqlPic\Dior-Eau-Sauvage.png" />
+    <Content Include="Admin\SqlPic\Dior-Homme-Cologne-600x600.png" />
+    <Content Include="Admin\SqlPic\Frangipani-600x600.png" />
+    <Content Include="Admin\SqlPic\Gin-and-Tonic-Cologne-Art-de-Parfum.png" />
+    <Content Include="Admin\SqlPic\Juniper-Wood-600x600.png" />
+    <Content Include="Admin\SqlPic\Leau-Dissey-Pour-Homme-1-600x600.png" />
+    <Content Include="Admin\SqlPic\Lily-Tangerine-600x600.png" />
+    <Content Include="Admin\SqlPic\Madame-M-600x600.png" />
+    <Content Include="Admin\SqlPic\Maltol-600x600.png" />
+    <Content Include="Admin\SqlPic\mango-leaf-butterfly-600x600.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-Bentley-Intense.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-Club-limited-xxiv-store.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-Dior-Homme-Parfum.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-H24-EDT-600x600.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-Lorchestre-Ambre-Cello-600x600.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-Montblanc-Signature-300x300.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-Purpureum.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-Terre-Hermes-EDT-600x600.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-toc-Delina-600x600.png" />
+    <Content Include="Admin\SqlPic\Nuoc-hoa-Vetiver-Overdrive.png" />
+    <Content Include="Admin\SqlPic\Olive-wood-leather-600x600.png" />
+    <Content Include="Admin\SqlPic\Optico-Sri-Lanka-600x600.png" />
+    <Content Include="Admin\SqlPic\Oud-Musk-600x600.png" />
+    <Content Include="Admin\SqlPic\Roja-Elixir-600x600.png" />
+    <Content Include="Admin\SqlPic\Salt-Cyclamen-600x600.png" />
+    <Content Include="Admin\SqlPic\Vanilla-600x600.png" />
+    <Content Include="Admin\SqlPic\Winter-Green-nuoc-hoa-300x300.png" />
+    <Content Include="Admin\SqlPic\Ylang-Ylang-Musk.png" />
+    <Content Include="Admin\SuaDacDiem.aspx" />
+    <Content Include="Admin\SuaGioHang.aspx" />
+    <Content Include="Admin\SuaHuong.aspx" />
+    <Content Include="Admin\SuaND.aspx" />
+    <Content Include="Admin\SuaSanPham.aspx" />
+    <Content Include="Admin\SuaTH.aspx" />
+    <Content Include="Admin\ThemDacDiem.aspx" />
+    <Content Include="Admin\ThemHuong.aspx" />
+    <Content Include="Admin\ThemSanPham.aspx" />
+    <Content Include="Admin\ThemThuongHieu.aspx" />
+    <Content Include="Admin\XoaDacDiem.aspx" />
+    <Content Include="Admin\XoaGioHang.aspx" />
+    <Content Include="Admin\XoaHuong.aspx" />
+    <Content Include="Admin\XoaNguoiDung.aspx" />
+    <Content Include="Admin\XoaSanPham.aspx" />
+    <Content Include="Admin\XoaThuongHieu.aspx" />
+>>>>>>> Stashed changes
     <Content Include="Blog.aspx" />
     <Content Include="Blog.css" />
     <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.css" />
@@ -133,6 +196,177 @@
     <Content Include="default.aspx" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QlyDacDiem.aspx.cs">
+      <DependentUpon>QlyDacDiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QlyDacDiem.aspx.designer.cs">
+      <DependentUpon>QlyDacDiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QlyGioHang.aspx.cs">
+      <DependentUpon>QlyGioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QlyGioHang.aspx.designer.cs">
+      <DependentUpon>QlyGioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QlyHuong.aspx.cs">
+      <DependentUpon>QlyHuong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QlyHuong.aspx.designer.cs">
+      <DependentUpon>QlyHuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QlyNguoiDung.aspx.cs">
+      <DependentUpon>QlyNguoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QlyNguoiDung.aspx.designer.cs">
+      <DependentUpon>QlyNguoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QlySanPham.aspx.cs">
+      <DependentUpon>QlySanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QlySanPham.aspx.designer.cs">
+      <DependentUpon>QlySanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\QlyThuongHieu.aspx.cs">
+      <DependentUpon>QlyThuongHieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\QlyThuongHieu.aspx.designer.cs">
+      <DependentUpon>QlyThuongHieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuaDacDiem.aspx.cs">
+      <DependentUpon>SuaDacDiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuaDacDiem.aspx.designer.cs">
+      <DependentUpon>SuaDacDiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuaGioHang.aspx.cs">
+      <DependentUpon>SuaGioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuaGioHang.aspx.designer.cs">
+      <DependentUpon>SuaGioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuaHuong.aspx.cs">
+      <DependentUpon>SuaHuong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuaHuong.aspx.designer.cs">
+      <DependentUpon>SuaHuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuaND.aspx.cs">
+      <DependentUpon>SuaND.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuaND.aspx.designer.cs">
+      <DependentUpon>SuaND.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuaSanPham.aspx.cs">
+      <DependentUpon>SuaSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuaSanPham.aspx.designer.cs">
+      <DependentUpon>SuaSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SuaTH.aspx.cs">
+      <DependentUpon>SuaTH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SuaTH.aspx.designer.cs">
+      <DependentUpon>SuaTH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemDacDiem.aspx.cs">
+      <DependentUpon>ThemDacDiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemDacDiem.aspx.designer.cs">
+      <DependentUpon>ThemDacDiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemHuong.aspx.cs">
+      <DependentUpon>ThemHuong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemHuong.aspx.designer.cs">
+      <DependentUpon>ThemHuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemSanPham.aspx.cs">
+      <DependentUpon>ThemSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemSanPham.aspx.designer.cs">
+      <DependentUpon>ThemSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemThuongHieu.aspx.cs">
+      <DependentUpon>ThemThuongHieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemThuongHieu.aspx.designer.cs">
+      <DependentUpon>ThemThuongHieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\XoaDacDiem.aspx.cs">
+      <DependentUpon>XoaDacDiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\XoaDacDiem.aspx.designer.cs">
+      <DependentUpon>XoaDacDiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\XoaGioHang.aspx.cs">
+      <DependentUpon>XoaGioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\XoaGioHang.aspx.designer.cs">
+      <DependentUpon>XoaGioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\XoaHuong.aspx.cs">
+      <DependentUpon>XoaHuong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\XoaHuong.aspx.designer.cs">
+      <DependentUpon>XoaHuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\XoaNguoiDung.aspx.cs">
+      <DependentUpon>XoaNguoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\XoaNguoiDung.aspx.designer.cs">
+      <DependentUpon>XoaNguoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\XoaSanPham.aspx.cs">
+      <DependentUpon>XoaSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\XoaSanPham.aspx.designer.cs">
+      <DependentUpon>XoaSanPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\XoaThuongHieu.aspx.cs">
+      <DependentUpon>XoaThuongHieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\XoaThuongHieu.aspx.designer.cs">
+      <DependentUpon>XoaThuongHieu.aspx</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="Blog.aspx.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,9 +388,23 @@
     <Compile Include="DanhSach.aspx.designer.cs">
       <DependentUpon>DanhSach.aspx</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Dao\DaoHangSX.cs" />
     <Compile Include="Dao\DaoSanPham.cs" />
     <Compile Include="Entity\HangSX.cs" />
+=======
+    <Compile Include="Dao\DaoDacDiem.cs" />
+    <Compile Include="Dao\DaoGioHang.cs" />
+    <Compile Include="Dao\DaoHangSX.cs" />
+    <Compile Include="Dao\DaoHuong.cs" />
+    <Compile Include="Dao\DaoNguoiDung.cs" />
+    <Compile Include="Dao\DaoSanPham.cs" />
+    <Compile Include="Entity\DacDiem.cs" />
+    <Compile Include="Entity\GioHang.cs" />
+    <Compile Include="Entity\HangSX.cs" />
+    <Compile Include="Entity\Huong.cs" />
+    <Compile Include="Entity\NguoiDung.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Entity\SanPham.cs" />
     <Compile Include="GioiThieu.aspx.cs">
       <DependentUpon>GioiThieu.aspx</DependentUpon>
@@ -187,6 +435,23 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="TaiKhoan.aspx.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TaiKhoan.aspx.designer.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoiMK.aspx.cs">
+      <DependentUpon>DoiMK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoiMK.aspx.designer.cs">
+      <DependentUpon>DoiMK.aspx</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <Content Include="bootstrap-5.0.2-dist\css\bootstrap-grid.css.map" />
@@ -213,7 +478,10 @@
     <Content Include="bootstrap-5.0.2-dist\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <Content Include="Header.Master" />
+<<<<<<< Updated upstream
     <Content Include="Site2.Master" />
+=======
+>>>>>>> Stashed changes
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -221,6 +489,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+<<<<<<< Updated upstream
+=======
+  <ItemGroup />
+>>>>>>> Stashed changes
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
